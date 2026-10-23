@@ -1,0 +1,167 @@
+{
+  "pages": [
+    {
+      "url": "https://bayer-beyond-qa-uk.vercel.app/en/",
+      "pageName": "Homepage",
+      "environment": "qa",
+      "components": [
+        {
+          "dataQa": "Header",
+          "componentName": "HeaderComponent",
+          "specFile": "tests/specs/header.spec.ts",
+          "testTags": [
+            "@Header",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "homepage-hero",
+          "componentName": "HomepageHeroComponent",
+          "specFile": "tests/specs/homepageHero.spec.ts",
+          "testTags": [
+            "@HomepageHero",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "teaser-group",
+          "componentName": "TeaserGroupComponent",
+          "specFile": "tests/specs/teaserGroupComponent.spec.ts",
+          "testTags": [
+            "@TeaserGroup",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "individual-teaser",
+          "componentName": "IndividualTeaserComponent",
+          "specFile": "tests/specs/individualTeaserComponent.spec.ts",
+          "testTags": [
+            "@IndividualTeaser",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "banner-component",
+          "componentName": "BannerComponent",
+          "specFile": "tests/specs/bannerSVariant.spec.ts",
+          "testTags": [
+            "@Banner",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-block",
+          "componentName": "FooterBlocksOfLinks",
+          "specFile": "tests/specs/footerBlocksOfLinks.spec.ts",
+          "testTags": [
+            "@FooterBlocks",
+            "@Functional"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://bayer-beyond-qa-uk.vercel.app/en/Develop/Test-Catalyst-Page/Content-Catalyst-Page/QADontDelete/QAAutomation/Sprint-9/TeaserGrid",
+      "pageName": "TeaserGrid Test Page",
+      "environment": "qa",
+      "components": [
+        {
+          "dataQa": "Header",
+          "componentName": "HeaderComponent",
+          "specFile": "tests/specs/header.spec.ts",
+          "testTags": [
+            "@Header",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "teaser-grid",
+          "componentName": "TeaserGridComponent",
+          "specFile": "tests/specs/teaserGrid.spec.ts",
+          "testTags": [
+            "@TeaserGrid",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "individual-teaser",
+          "componentName": "IndividualTeaserComponent",
+          "specFile": "tests/specs/individualTeaserComponent.spec.ts",
+          "testTags": [
+            "@IndividualTeaser",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-block",
+          "componentName": "FooterBlocksOfLinks",
+          "specFile": "tests/specs/footerBlocksOfLinks.spec.ts",
+          "testTags": [
+            "@FooterBlocks",
+            "@Functional"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://bayer-beyond-qa-uk.vercel.app/en/career/Early-Careers",
+      "pageName": "Early Careers",
+      "environment": "qa",
+      "components": [
+        {
+          "dataQa": "Header",
+          "componentName": "HeaderComponent",
+          "specFile": "tests/specs/header.spec.ts",
+          "testTags": [
+            "@Header",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-block",
+          "componentName": "FooterBlocksOfLinks",
+          "specFile": "tests/specs/footerBlocksOfLinks.spec.ts",
+          "testTags": [
+            "@FooterBlocks",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "breadcrumb",
+          "componentName": "BreadcrumbComponent",
+          "specFile": "tests/specs/breadcrumbComponent.spec.ts",
+          "testTags": [
+            "@Breadcrumb",
+            "@Functional"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://bayer-beyond-qa-uk.vercel.app/en/search",
+      "pageName": "Search Page",
+      "environment": "qa",
+      "components": [
+        {
+          "dataQa": "Header",
+          "componentName": "HeaderComponent",
+          "specFile": "tests/specs/header.spec.ts",
+          "testTags": [
+            "@Header",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-block",
+          "componentName": "FooterBlocksOfLinks",
+          "specFile": "tests/specs/footerBlocksOfLinks.spec.ts",
+          "testTags": [
+            "@FooterBlocks",
+            "@Functional"
+          ]
+        }
+      ]
+    }
+  ]
+}

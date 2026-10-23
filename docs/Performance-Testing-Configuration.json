@@ -1,0 +1,246 @@
+{
+  "performanceTestingFramework": {
+    "title": "Playwright Performance Testing Framework",
+    "component": "Text with Image Default",
+    "version": "1.0",
+    "lastUpdated": "2025-07-13",
+    "project": "Bayer EF-Comms DXP Test Suite"
+  },
+  "testValidations": {
+    "componentLoadPerformance": {
+      "description": "Validates overall page load speed and Core Web Vitals compliance",
+      "thresholds": {
+        "pageLoadTime": "< 12,000ms",
+        "networkRequests": "< 150 requests",
+        "avgResponseTime": "< 4,000ms",
+        "totalResponseSize": "< 8MB"
+      },
+      "coreWebVitals": ["LCP", "FCP", "CLS", "TTI"]
+    },
+    "componentRenderingPerformance": {
+      "description": "Measures granular rendering timing for component parts",
+      "thresholds": {
+        "containerRenderTime": "< 3,000ms",
+        "imageLoadTime": "< 5,000ms",
+        "textRenderTime": "< 2,000ms"
+      },
+      "validations": ["Element visibility", "Component interactivity"]
+    },
+    "imageOptimizationAnalysis": {
+      "description": "Analyzes image loading efficiency and optimization",
+      "validations": {
+        "imageCompleteStatus": "Must be true",
+        "naturalDimensions": "> 0 pixels",
+        "renderedDimensions": "> 0 pixels",
+        "loadingAttributes": "Tracked",
+        "imageSourceValidation": "URL accessibility verified"
+      }
+    },
+    "performanceRegressionDetection": {
+      "description": "Ensures performance doesn't degrade over time",
+      "baselineThresholds": {
+        "maxPageLoadTime": "10,000ms",
+        "maxLCP": "4,000ms",
+        "maxFCP": "3,000ms",
+        "maxCLS": "0.2",
+        "maxRequests": "120",
+        "maxTotalSize": "6MB"
+      }
+    }
+  },
+  "coreMetrics": {
+    "coreWebVitals": {
+      "LCP": {
+        "name": "Largest Contentful Paint",
+        "threshold": "< 2.5s (Good)",
+        "impact": "Page loading performance"
+      },
+      "FCP": {
+        "name": "First Contentful Paint",
+        "threshold": "< 1.8s (Good)",
+        "impact": "Initial page rendering"
+      },
+      "CLS": {
+        "name": "Cumulative Layout Shift",
+        "threshold": "< 0.1 (Good)",
+        "impact": "Visual stability"
+      },
+      "FID": {
+        "name": "First Input Delay",
+        "threshold": "< 100ms (Good)",
+        "impact": "Interactivity responsiveness"
+      },
+      "TTI": {
+        "name": "Time to Interactive",
+        "threshold": "< 3.8s (Good)",
+        "impact": "Full interactivity"
+      }
+    },
+    "performanceTimingMetrics": {
+      "pageLoadTime": {
+        "description": "Total time from navigation start",
+        "threshold": "< 12s"
+      },
+      "domContentLoaded": {
+        "description": "DOM parsing completion",
+        "threshold": "Tracked"
+      },
+      "loadComplete": {
+        "description": "All resources loaded",
+        "threshold": "Tracked"
+      },
+      "timeToFirstByte": {
+        "description": "Server response time",
+        "threshold": "Tracked"
+      }
+    },
+    "networkPerformanceMetrics": {
+      "totalRequests": {
+        "description": "Number of HTTP requests",
+        "threshold": "< 150"
+      },
+      "avgResponseTime": {
+        "description": "Mean response time",
+        "threshold": "< 4s"
+      },
+      "totalResponseSize": {
+        "description": "Combined size of all responses",
+        "threshold": "< 8MB"
+      },
+      "slowestRequest": {
+        "description": "Identifies performance bottlenecks",
+        "threshold": "Tracked"
+      }
+    },
+    "componentSpecificMetrics": {
+      "containerRenderTime": {
+        "description": "Component container visibility",
+        "threshold": "< 3s"
+      },
+      "imageLoadTime": {
+        "description": "Image element loading",
+        "threshold": "< 5s"
+      },
+      "textRenderTime": {
+        "description": "Text content rendering",
+        "threshold": "< 2s"
+      },
+      "totalResources": {
+        "description": "DOM elements count",
+        "threshold": "Tracked"
+      }
+    },
+    "imageOptimizationMetrics": {
+      "imageComplete": {
+        "description": "Loading status",
+        "validation": "Must be true"
+      },
+      "naturalDimensions": {
+        "description": "Original image size",
+        "validation": "> 0 pixels"
+      },
+      "renderedDimensions": {
+        "description": "Display size",
+        "validation": "> 0 pixels"
+      },
+      "loadingStrategy": {
+        "description": "Lazy/eager loading",
+        "validation": "Tracked"
+      },
+      "decodingStrategy": {
+        "description": "Image decoding method",
+        "validation": "Tracked"
+      }
+    }
+  },
+  "performanceStandards": {
+    "passCriteria": [
+      "All timing thresholds met",
+      "Core Web Vitals within acceptable ranges",
+      "Network efficiency maintained",
+      "No performance regressions detected"
+    ],
+    "failCriteria": [
+      "Page load time > 12 seconds",
+      "Network requests > 150",
+      "Response size > 8MB",
+      "Core Web Vitals exceed thresholds",
+      "Component rendering too slow",
+      "Images fail to load properly"
+    ],
+    "realWorldImpact": {
+      "userExperience": "Fast loading, responsive interactions",
+      "seoPerformance": "Better Google Core Web Vitals scores",
+      "businessMetrics": "Reduced bounce rates, improved conversions",
+      "technicalDebt": "Early detection of performance degradation"
+    }
+  },
+  "commandsAndUsage": {
+    "quickCommands": {
+      "runWithReport": "npm run test:performance:report",
+      "runOnly": "npm run test:performance",
+      "jsonOutput": "npm run test:performance:json",
+      "viewReport": "npx playwright show-report"
+    },
+    "fileLocations": {
+      "testScript": "tests/specs/textWithImageDefault.performance.spec.ts",
+      "performanceMonitor": "performance-testing/prototype/utils/performanceMonitor.ts",
+      "componentPageObject": "components/textWithImageDefault.ts"
+    },
+    "reportLocations": {
+      "htmlReports": "./reports/html-report/index.html",
+      "allureReports": "./reports/allure/allure-report/",
+      "testResults": "./test-results/"
+    }
+  },
+  "performanceMonitorFeatures": {
+    "coreWebVitalsTracking": {
+      "lcpObserver": "Monitors largest contentful paint",
+      "fcpObserver": "Tracks first contentful paint",
+      "clsObserver": "Measures cumulative layout shift",
+      "fidObserver": "Captures first input delay"
+    },
+    "networkMonitoring": {
+      "requestTracking": "All HTTP requests monitored",
+      "responseAnalysis": "Size and timing captured",
+      "performanceBottlenecks": "Slowest requests identified"
+    },
+    "browserPerformanceAPIs": {
+      "navigationTimingAPI": "Page load metrics",
+      "resourceTimingAPI": "Individual resource performance",
+      "performanceObserverAPI": "Real-time metrics collection"
+    }
+  },
+  "sampleReportFormat": {
+    "timestamp": "2025-07-13T...",
+    "url": "component-page-url",
+    "metrics": {
+      "lcp": 2450,
+      "fcp": 1680,
+      "cls": 0.08,
+      "fid": 85,
+      "tti": 3200,
+      "pageLoadTime": 4500,
+      "domContentLoaded": 1200,
+      "loadComplete": 4300,
+      "totalResources": 45,
+      "totalResourceSize": 2048000,
+      "timeToFirstByte": 350
+    },
+    "networkMetrics": {
+      "totalRequests": 45,
+      "totalResponseSize": 2048000,
+      "avgResponseTime": 245,
+      "slowestRequest": {
+        "url": "slowest-resource-url",
+        "duration": 1200
+      }
+    },
+    "thresholds": {
+      "lcp": { "value": 2450, "threshold": 2500, "passed": true },
+      "fcp": { "value": 1680, "threshold": 1800, "passed": true },
+      "cls": { "value": 0.08, "threshold": 0.1, "passed": true },
+      "fid": { "value": 85, "threshold": 100, "passed": true }
+    }
+  }
+}

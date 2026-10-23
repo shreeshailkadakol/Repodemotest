@@ -1,0 +1,651 @@
+{
+  "pages": [
+    {
+      "url": "https://bayer-beyond-qa-uk.vercel.app/en/",
+      "pageName": "Homepage",
+      "environment": "qa",
+      "components": [
+        {
+          "dataQa": "Header",
+          "componentName": "Header",
+          "specFile": "tests/specs/header.spec.ts",
+          "testTags": [
+            "@Header",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer",
+          "componentName": "Footer",
+          "specFile": "tests/specs/footer.spec.ts",
+          "testTags": [
+            "@Footer",
+            "@Functional"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://bayer-beyond-qa-uk.vercel.app/en/career/Early-Careers",
+      "pageName": "Early Careers Page",
+      "environment": "qa",
+      "components": [
+        {
+          "dataQa": "Header",
+          "componentName": "Header",
+          "specFile": "tests/specs/header.spec.ts",
+          "testTags": [
+            "@Header",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer",
+          "componentName": "Footer",
+          "specFile": "tests/specs/footer.spec.ts",
+          "testTags": [
+            "@Footer",
+            "@Functional"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://bayer-beyond-qa-uk.vercel.app/en/search",
+      "pageName": "Search Page",
+      "environment": "qa",
+      "components": [
+        {
+          "dataQa": "Header",
+          "componentName": "Header",
+          "specFile": "tests/specs/header.spec.ts",
+          "testTags": [
+            "@Header",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer",
+          "componentName": "Footer",
+          "specFile": "tests/specs/footer.spec.ts",
+          "testTags": [
+            "@Footer",
+            "@Functional"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://bayer-beyond-qa-uk.vercel.app/en/",
+      "pageName": "Homepage",
+      "environment": "qa",
+      "components": [
+        {
+          "dataQa": "Header",
+          "componentName": "Header",
+          "specFile": "tests/specs/header.spec.ts",
+          "testTags": [
+            "@Header",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "PillNavigation",
+          "componentName": "PillNavigation",
+          "specFile": "tests/specs/pill-navigation.spec.ts",
+          "testTags": [
+            "@PillNavigation",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "Link",
+          "componentName": "Link",
+          "specFile": "tests/specs/link.spec.ts",
+          "testTags": [
+            "@Link",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "icon",
+          "componentName": "Icon",
+          "specFile": "tests/specs/icon.spec.ts",
+          "testTags": [
+            "@Icon",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "Search",
+          "componentName": "Search",
+          "specFile": "tests/specs/search.spec.ts",
+          "testTags": [
+            "@Search",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "top-right-navigation",
+          "componentName": "TopRightNavigation",
+          "specFile": "tests/specs/top-right-navigation.spec.ts",
+          "testTags": [
+            "@TopRightNavigation",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "location-dropdown",
+          "componentName": "LocationDropdown",
+          "specFile": "tests/specs/location-dropdown.spec.ts",
+          "testTags": [
+            "@LocationDropdown",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "select-location-button",
+          "componentName": "SelectLocationButton",
+          "specFile": "tests/specs/select-location-button.spec.ts",
+          "testTags": [
+            "@SelectLocationButton",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "language-dropdown",
+          "componentName": "LanguageDropdown",
+          "specFile": "tests/specs/language-dropdown.spec.ts",
+          "testTags": [
+            "@LanguageDropdown",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "select-language-button",
+          "componentName": "SelectLanguageButton",
+          "specFile": "tests/specs/select-language-button.spec.ts",
+          "testTags": [
+            "@SelectLanguageButton",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "fullwidth-column",
+          "componentName": "FullwidthColumn",
+          "specFile": "tests/specs/fullwidth-column.spec.ts",
+          "testTags": [
+            "@FullwidthColumn",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "homepage-hero",
+          "componentName": "HomepageHero",
+          "specFile": "tests/specs/homepage-hero.spec.ts",
+          "testTags": [
+            "@HomepageHero",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "homepage-hero-play-pause",
+          "componentName": "HomepageHeroPlayPause",
+          "specFile": "tests/specs/homepage-hero-play-pause.spec.ts",
+          "testTags": [
+            "@HomepageHeroPlayPause",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "homepage-hero-scroll-down",
+          "componentName": "HomepageHeroScrollDown",
+          "specFile": "tests/specs/homepage-hero-scroll-down.spec.ts",
+          "testTags": [
+            "@HomepageHeroScrollDown",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "stage-kicker-text",
+          "componentName": "StageKickerText",
+          "specFile": "tests/specs/stage-kicker-text.spec.ts",
+          "testTags": [
+            "@StageKickerText",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "stage-headline-text",
+          "componentName": "StageHeadlineText",
+          "specFile": "tests/specs/stage-headline-text.spec.ts",
+          "testTags": [
+            "@StageHeadlineText",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "teaser-group",
+          "componentName": "TeaserGroup",
+          "specFile": "tests/specs/teaser-group.spec.ts",
+          "testTags": [
+            "@TeaserGroup",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "individual-teaser",
+          "componentName": "IndividualTeaser",
+          "specFile": "tests/specs/individual-teaser.spec.ts",
+          "testTags": [
+            "@IndividualTeaser",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "individual-teaser-image",
+          "componentName": "IndividualTeaserImage",
+          "specFile": "tests/specs/individual-teaser-image.spec.ts",
+          "testTags": [
+            "@IndividualTeaserImage",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "banner-component",
+          "componentName": "BannerComponent",
+          "specFile": "tests/specs/banner-component.spec.ts",
+          "testTags": [
+            "@BannerComponent",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "banner-content",
+          "componentName": "BannerContent",
+          "specFile": "tests/specs/banner-content.spec.ts",
+          "testTags": [
+            "@BannerContent",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "columns50",
+          "componentName": "Columns50",
+          "specFile": "tests/specs/columns50.spec.ts",
+          "testTags": [
+            "@Columns50",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "link-box",
+          "componentName": "LinkBox",
+          "specFile": "tests/specs/link-box.spec.ts",
+          "testTags": [
+            "@LinkBox",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-block",
+          "componentName": "FooterBlock",
+          "specFile": "tests/specs/footer-block.spec.ts",
+          "testTags": [
+            "@FooterBlock",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-logo",
+          "componentName": "FooterLogo",
+          "specFile": "tests/specs/footer-logo.spec.ts",
+          "testTags": [
+            "@FooterLogo",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "stock-price",
+          "componentName": "StockPrice",
+          "specFile": "tests/specs/stock-price.spec.ts",
+          "testTags": [
+            "@StockPrice",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-links",
+          "componentName": "FooterLinks",
+          "specFile": "tests/specs/footer-links.spec.ts",
+          "testTags": [
+            "@FooterLinks",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "upper-links",
+          "componentName": "UpperLinks",
+          "specFile": "tests/specs/upper-links.spec.ts",
+          "testTags": [
+            "@UpperLinks",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "social-media-links",
+          "componentName": "SocialMediaLinks",
+          "specFile": "tests/specs/social-media-links.spec.ts",
+          "testTags": [
+            "@SocialMediaLinks",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "middle-links",
+          "componentName": "MiddleLinks",
+          "specFile": "tests/specs/middle-links.spec.ts",
+          "testTags": [
+            "@MiddleLinks",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-copyright",
+          "componentName": "FooterCopyright",
+          "specFile": "tests/specs/footer-copyright.spec.ts",
+          "testTags": [
+            "@FooterCopyright",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "lower-links",
+          "componentName": "LowerLinks",
+          "specFile": "tests/specs/lower-links.spec.ts",
+          "testTags": [
+            "@LowerLinks",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "onetrust-script",
+          "componentName": "OnetrustScript",
+          "specFile": "tests/specs/onetrust-script.spec.ts",
+          "testTags": [
+            "@OnetrustScript",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "gtm-script",
+          "componentName": "GtmScript",
+          "specFile": "tests/specs/gtm-script.spec.ts",
+          "testTags": [
+            "@GtmScript",
+            "@Functional"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://bayer-beyond-qa-uk.vercel.app/en/Develop/Test-Catalyst-Page/Content-Catalyst-Page/QADontDelete/QAAutomation/Sprint-9/TeaserGrid",
+      "pageName": "TeaserGrid Test Page",
+      "environment": "qa",
+      "components": [
+        {
+          "dataQa": "Header",
+          "componentName": "Header",
+          "specFile": "tests/specs/header.spec.ts",
+          "testTags": [
+            "@Header",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "PillNavigation",
+          "componentName": "PillNavigation",
+          "specFile": "tests/specs/pill-navigation.spec.ts",
+          "testTags": [
+            "@PillNavigation",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "Link",
+          "componentName": "Link",
+          "specFile": "tests/specs/link.spec.ts",
+          "testTags": [
+            "@Link",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "icon",
+          "componentName": "Icon",
+          "specFile": "tests/specs/icon.spec.ts",
+          "testTags": [
+            "@Icon",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "Search",
+          "componentName": "Search",
+          "specFile": "tests/specs/search.spec.ts",
+          "testTags": [
+            "@Search",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "top-right-navigation",
+          "componentName": "TopRightNavigation",
+          "specFile": "tests/specs/top-right-navigation.spec.ts",
+          "testTags": [
+            "@TopRightNavigation",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "location-dropdown",
+          "componentName": "LocationDropdown",
+          "specFile": "tests/specs/location-dropdown.spec.ts",
+          "testTags": [
+            "@LocationDropdown",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "select-location-button",
+          "componentName": "SelectLocationButton",
+          "specFile": "tests/specs/select-location-button.spec.ts",
+          "testTags": [
+            "@SelectLocationButton",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "language-dropdown",
+          "componentName": "LanguageDropdown",
+          "specFile": "tests/specs/language-dropdown.spec.ts",
+          "testTags": [
+            "@LanguageDropdown",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "select-language-button",
+          "componentName": "SelectLanguageButton",
+          "specFile": "tests/specs/select-language-button.spec.ts",
+          "testTags": [
+            "@SelectLanguageButton",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "fullwidth-column",
+          "componentName": "FullwidthColumn",
+          "specFile": "tests/specs/fullwidth-column.spec.ts",
+          "testTags": [
+            "@FullwidthColumn",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "stage-headline-text",
+          "componentName": "StageHeadlineText",
+          "specFile": "tests/specs/stage-headline-text.spec.ts",
+          "testTags": [
+            "@StageHeadlineText",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "stage-intro-text",
+          "componentName": "StageIntroText",
+          "specFile": "tests/specs/stage-intro-text.spec.ts",
+          "testTags": [
+            "@StageIntroText",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "teaser-grid",
+          "componentName": "TeaserGrid",
+          "specFile": "tests/specs/teaser-grid.spec.ts",
+          "testTags": [
+            "@TeaserGrid",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "teaser-grid-container",
+          "componentName": "TeaserGridContainer",
+          "specFile": "tests/specs/teaser-grid-container.spec.ts",
+          "testTags": [
+            "@TeaserGridContainer",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "individual-teaser",
+          "componentName": "IndividualTeaser",
+          "specFile": "tests/specs/individual-teaser.spec.ts",
+          "testTags": [
+            "@IndividualTeaser",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "individual-teaser-image",
+          "componentName": "IndividualTeaserImage",
+          "specFile": "tests/specs/individual-teaser-image.spec.ts",
+          "testTags": [
+            "@IndividualTeaserImage",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-block",
+          "componentName": "FooterBlock",
+          "specFile": "tests/specs/footer-block.spec.ts",
+          "testTags": [
+            "@FooterBlock",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-logo",
+          "componentName": "FooterLogo",
+          "specFile": "tests/specs/footer-logo.spec.ts",
+          "testTags": [
+            "@FooterLogo",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "stock-price",
+          "componentName": "StockPrice",
+          "specFile": "tests/specs/stock-price.spec.ts",
+          "testTags": [
+            "@StockPrice",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-links",
+          "componentName": "FooterLinks",
+          "specFile": "tests/specs/footer-links.spec.ts",
+          "testTags": [
+            "@FooterLinks",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "upper-links",
+          "componentName": "UpperLinks",
+          "specFile": "tests/specs/upper-links.spec.ts",
+          "testTags": [
+            "@UpperLinks",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "social-media-links",
+          "componentName": "SocialMediaLinks",
+          "specFile": "tests/specs/social-media-links.spec.ts",
+          "testTags": [
+            "@SocialMediaLinks",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "middle-links",
+          "componentName": "MiddleLinks",
+          "specFile": "tests/specs/middle-links.spec.ts",
+          "testTags": [
+            "@MiddleLinks",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-copyright",
+          "componentName": "FooterCopyright",
+          "specFile": "tests/specs/footer-copyright.spec.ts",
+          "testTags": [
+            "@FooterCopyright",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "lower-links",
+          "componentName": "LowerLinks",
+          "specFile": "tests/specs/lower-links.spec.ts",
+          "testTags": [
+            "@LowerLinks",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "onetrust-script",
+          "componentName": "OnetrustScript",
+          "specFile": "tests/specs/onetrust-script.spec.ts",
+          "testTags": [
+            "@OnetrustScript",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "gtm-script",
+          "componentName": "GtmScript",
+          "specFile": "tests/specs/gtm-script.spec.ts",
+          "testTags": [
+            "@GtmScript",
+            "@Functional"
+          ]
+        }
+      ]
+    }
+  ]
+}

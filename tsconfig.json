@@ -1,0 +1,66 @@
+{
+  // TypeScript Configuration for ef-comms-dxp-test Playwright Automation Suite
+  // 
+  // Purpose: This configuration enables TypeScript compilation and linting for the test automation framework.
+  // Required by ESLint configuration (eslint.config.mjs) which references './tsconfig.json' in parserOptions.
+  // 
+  // Key Features:
+  // - ES2020 target for modern JavaScript features in Playwright tests
+  // - Path mappings (@components/*, @helpers/*, etc.) for clean import statements
+  // - Strict type checking to ensure code quality and catch errors early
+  // - Module resolution configured for Node.js environment
+  // 
+  // Impact: Without this file, ESLint parsing fails and TypeScript compilation is not available,
+  // breaking the development workflow and CI/CD pipeline.
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ES6",
+      "ES2020"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "declaration": false,
+    "declarationMap": false,
+    "outDir": "./dist",
+    "rootDir": "./",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@components/*": ["./components/*"],
+      "@helpers/*": ["./helpers/*"],
+      "@tests/*": ["./tests/*"],
+      "@data/*": ["./data/*"],
+      "@config/*": ["./config/*"]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.js",
+    "components/**/*",
+    "helpers/**/*",
+    "tests/**/*",
+    "data/**/*",
+    "config/**/*",
+    "figma-values/**/*",
+    "performance-testing/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "playwright-report",
+    "test-results",
+    "reports"
+  ]
+}
