@@ -2,10 +2,10 @@
 
 export class envUtils {
   static readonly baseUrls = {
-    dev: 'https://ef-comms-rjkjhx9x2-bayer-stakeholder-and-employee-journey.vercel.app/',
+    //dev: 'https://ef-comms-rjkjhx9x2-bayer-stakeholder-and-employee-journey.vercel.app/',
     qa: 'https://www.saucedemo.com/',
-    stg: 'https://bayer-beyond-staging-uk.vercel.app/',
-    prod: 'https://bayer-beyond-prod-au.vercel.app/en-au/',
+    //stg: 'https://bayer-beyond-staging-uk.vercel.app/',
+    //prod: 'https://bayer-beyond-prod-au.vercel.app/en-au/',
     
     
   } as const;

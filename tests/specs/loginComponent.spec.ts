@@ -57,6 +57,37 @@ test.describe('Login Component Tests @Login', () => {
     await login.verifyOnLoginPage();
   });
 
+  for (const username of ['problem_user', 'performance_glitch_user', 'error_user', 'visual_user']) {
+    test(`TC-L09: ${username} can log in @Functional`, async ({ page }) => {
+      await login.login(username, PWD);
+      await expect(page).toHaveURL(/inventory\.html/);
+      await expect(await login.getInventoryList()).toBeVisible();
+    });
+  }
+
+  test('TC-L10: submit login with Enter key @Functional', async ({ page }) => {
+    await (await login.getUsernameField()).fill('standard_user');
+    const passwordField = await login.getPasswordField();
+    await passwordField.fill(PWD);
+    await passwordField.press('Enter');
+    await expect(page).toHaveURL(/inventory\.html/);
+    await expect(await login.getInventoryList()).toBeVisible();
+  });
+
+  test('TC-L11: password is masked @Functional', async () => {
+    await expect(await login.getPasswordField()).toHaveAttribute('type', 'password');
+  });
+
+  test('TC-L12: successful login recovers from invalid credentials @Functional', async ({
+    page,
+  }) => {
+    await login.login('standard_user', 'wrong_pass');
+    await login.verifyError(/do not match/i);
+    await login.login('standard_user', PWD);
+    await expect(page).toHaveURL(/inventory\.html/);
+    await expect(await login.getInventoryList()).toBeVisible();
+  });
+
   test('TC-AL01: Login form accessibility @Accessibility', async () => {
     await login.validateAccessibility();
   });
