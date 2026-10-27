@@ -1,0 +1,8 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","5063","TC-RG-03: invalid email is rejected by browser validity @Functional","chromium","2026-10-27","passed","2026-10-27","Register Component Tests @Register","registerComponent.spec.ts","",""
+"","4732","TC-RG-04: registration page loads within the smoke budget @Performance","chromium","2026-10-27","passed","2026-10-27","Register Component Tests @Register","registerComponent.spec.ts","",""
+"","4414","TC-RG-05: registration form fits desktop viewport @Visual","chromium","2026-10-27","passed","2026-10-27","Register Component Tests @Register","registerComponent.spec.ts","",""
+"","4297","TC-RG-01: registration form controls are available @Functional @Smoke","chromium","2026-10-27","passed","2026-10-27","Register Component Tests @Register","registerComponent.spec.ts","",""
+"","4327","TC-RG-05: registration form fits mobile viewport @Visual","chromium","2026-10-27","passed","2026-10-27","Register Component Tests @Register","registerComponent.spec.ts","",""
+"","4235","TC-RG-02: registration fields use appropriate input types @Functional","chromium","2026-10-27","passed","2026-10-27","Register Component Tests @Register","registerComponent.spec.ts","",""
+"","24644","TC-ARG-01: registration page passes axe accessibility scan @Accessibility","chromium","2026-10-27","failed","2026-10-27","Register Component Tests @Register","registerComponent.spec.ts","",""

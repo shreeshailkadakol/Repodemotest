@@ -1304,6 +1304,93 @@ standard_user	wrong_pass	Invalid credentials
 Blank	secret_sauce	Username required
 standard_user	Blank	Password required
 
+**Sauce Demo - Register Feature (Brief Details)**
+
+The Register feature on Sauce Demo Shopify site (https://sauce-demo.myshopify.com/account/register) allows new users to create an account and access customer-specific functionalities such as order history, saved addresses, and account management.
+
+Feature Overview
+
+A user can register by providing:
+
+First Name
+Last Name
+Email Address
+Password
+Password Confirmation
+
+After successful registration:
+
+The account is created.
+User may receive a confirmation email (if configured).
+User can log in using the registered credentials.
+User is redirected to their account page or a success page.
+Acceptance Criteria
+AC1: Successful Registration
+
+Given the user is on the Register page
+ When the user enters valid First Name, Last Name, Email, Password, and Confirm Password and clicks Create
+ Then the account should be created successfully
+ And the user should be redirected to the account page or see a success message.
+
+AC2: Mandatory Field Validation
+
+Given the user is on the Register page
+ When one or more required fields are left blank
+ Then the system should display appropriate validation messages
+ And account creation should not proceed.
+
+AC3: Email Format Validation
+
+Given the user enters an email address
+ When the email format is invalid (e.g., test.com)
+ Then the system should display an error message indicating an invalid email format.
+
+AC4: Duplicate Email Validation
+
+Given an account already exists with the entered email address
+ When the user attempts to register with the same email
+ Then the system should display an error message stating that the email is already registered.
+
+AC5: Password Confirmation Validation
+
+Given the user enters a password and confirmation password
+ When the values do not match
+ Then the system should display a "Passwords do not match" error
+ And registration should be prevented.
+
+AC6: Password Security Requirements
+
+Given the user enters a password
+ When the password does not meet the configured security requirements
+ Then an appropriate validation message should be displayed
+ And account creation should not proceed.
+
+AC7: Trim Leading and Trailing Spaces
+
+Given the user enters values with leading or trailing spaces
+ When the registration form is submitted
+ Then the spaces should be trimmed before validation and storage.
+
+AC8: Create Button Behavior
+
+Given all mandatory fields contain valid data
+ When the user clicks the Create button
+ Then the button should submit the registration request only once
+ And prevent duplicate account creation from multiple clicks.
+
+AC9: Error Handling
+
+Given a system or server error occurs during registration
+ When the registration request fails
+ Then the user should see a user-friendly error message
+ And be allowed to retry.
+
+AC10: Accessibility
+
+Given the Register page is loaded
+ When users navigate using keyboard or screen readers
+ Then all fields, labels, and buttons should be accessible and compliant with basic accessibility standards.
+
 
 
 

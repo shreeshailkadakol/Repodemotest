@@ -4,6 +4,11 @@ export const componentURL = {
       url: '/',
     },
   },
+  RegisterComponent: {
+    testData: {
+      url: 'https://sauce-demo.myshopify.com/account/register',
+    },
+  },
   LinkDisclaimerComponent: {
     testData: {
       url: '/',

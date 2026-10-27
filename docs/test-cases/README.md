@@ -38,6 +38,12 @@ This directory contains detailed test cases for each component based on requirem
    - Rich text body content validation
    - Tagged with @Functional and @Accessibility
 
+5. [Sauce Demo Register](./saucedemo-register.test-cases.md)
+   - Registration form structure, field types, and invalid-email validation
+   - Responsive and page-load smoke checks
+   - Accessibility coverage with current live-page findings documented
+   - Account-creation flows marked blocked while Shopify sign-up is disabled
+
 ## Best Practices
 1. Keep test cases updated when requirements change
 2. Maintain traceability between requirements and test cases

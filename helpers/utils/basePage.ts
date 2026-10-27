@@ -49,6 +49,10 @@ export class BasePage {
       throw new Error(`URL for component ${String(componentName)} not defined in componentURLs.ts`);
     }
 
+    if (/^https?:\/\//i.test(componentPath)) {
+      return componentPath;
+    }
+
     const fullUrl = `${baseURL.replace(/\/$/, '')}${componentPath.startsWith('/') ? '' : '/'}${componentPath}`;
     return fullUrl;
   }
