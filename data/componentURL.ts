@@ -9,6 +9,16 @@ export const componentURL = {
       url: 'https://sauce-demo.myshopify.com/account/register',
     },
   },
+  SearchProductComponent: {
+    testData: {
+      url: 'https://sauce-demo.myshopify.com/',
+    },
+  },
+  AddToCartComponent: {
+    testData: {
+      url: 'https://sauce-demo.myshopify.com/products/grey-jacket',
+    },
+  },
   LinkDisclaimerComponent: {
     testData: {
       url: '/',

@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"36c900977e1d8b81a2c6893cc82bfc01","name":"chromium","statistic":{"failed":6,"broken":0,"skipped":14,"passed":44,"unknown":0,"total":64}},{"uid":"d4ab7920d01a941bcf5c1dd2d5a7e81a","name":"Desktop Full HD","statistic":{"failed":1,"broken":0,"skipped":0,"passed":6,"unknown":0,"total":7}}]}

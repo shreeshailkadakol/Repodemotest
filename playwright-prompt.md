@@ -1391,11 +1391,119 @@ Given the Register page is loaded
  When users navigate using keyboard or screen readers
  Then all fields, labels, and buttons should be accessible and compliant with basic accessibility standards.
 
+ **Sauce Demo – Search Product Feature (Grey Jacket)**
 
+Brief Description:
+ The Search Product feature allows users to quickly locate products available in the Sauce Demo Shopify store by entering a product name or keyword. In this scenario, the user searches for "Grey Jacket" using the search bar. The system should display the matching product with relevant details such as product image, name, price, and availability. The user should be able to access the product details page directly from the search results.
 
+Business Value
+Improves product discoverability.
+Enhances user shopping experience by reducing product search time.
+Enables customers to quickly navigate to desired products and proceed with purchase.
+Acceptance Criteria
+AC1: Search Product by Name
 
+Given the user is on the Sauce Demo store homepage
+ When the user enters "Grey Jacket" in the search field and initiates the search
+ Then the system should display the Grey Jacket product in the search results.
 
+AC2: Display Relevant Product Information
 
+Given the search results are displayed
+ When the Grey Jacket product appears in the results
+ Then the system should display:
 
+Product name
+Product image
+Product price
+Product availability/status
+AC3: Search Result Accuracy
 
+Given the user searches for "Grey Jacket"
+ When the search is executed
+ Then the returned results should be relevant to the search keyword.
+
+AC4: Product Navigation
+
+Given the Grey Jacket product is displayed in the search results
+ When the user clicks the product
+ Then the system should navigate the user to the Grey Jacket product details page.
+
+AC5: No Application Errors
+
+Given the user performs a valid search
+ When the search results are displayed
+ Then no system errors, broken pages, or unexpected messages should be shown.
+
+AC6: Search Performance
+
+Given the user submits the search request
+ When the system processes the search
+ Then the search results should be displayed within an acceptable response time.
+
+Expected Result
+
+The user successfully searches for Grey Jacket, views the relevant product details in the search results, and can navigate to the product page without any errors.
+
+**Sauce Demo – Add Product to Cart from Product Details Page (Grey Jacket)**
+Brief Description:
+ The Add to Cart feature enables users to add the Grey Jacket product to their shopping cart directly from the product details page. After viewing the product information, the user can click the Add to Cart button to add the item to their cart for purchase. The system should update the cart count, retain the selected product, and allow the user to continue shopping or proceed to checkout.
+
+Business Value
+Enables customers to select products for purchase.
+Provides a seamless shopping experience.
+Supports the checkout flow by maintaining selected product information in the cart.
+Improves conversion by simplifying the purchase process.
+Acceptance Criteria
+AC1: View Product Details
+
+Given the user has searched for and selected the Grey Jacket product
+ When the product details page is displayed
+ Then the user should be able to view the product name, image, description, price, and Add to Cart button.
+
+AC2: Add Product to Cart
+
+Given the user is on the Grey Jacket product details page
+ When the user clicks the Add to Cart button
+ Then the Grey Jacket product should be added to the shopping cart successfully.
+
+AC3: Cart Count Update
+
+Given the Grey Jacket product has been added to the cart
+ When the add-to-cart action is completed
+ Then the cart icon/count should update to reflect the added item.
+
+AC4: Confirmation of Add to Cart Action
+
+Given the user adds the Grey Jacket to the cart
+ When the action is successful
+ Then the system should display a success message, notification, or visual indication confirming the product has been added.
+
+AC5: Product Retained in Cart
+
+Given the Grey Jacket product has been added to the cart
+ When the user navigates to the cart page
+ Then the Grey Jacket product should be displayed with the correct product details.
+
+AC6: Correct Product Information
+
+Given the Grey Jacket product is displayed in the cart
+ When the user reviews the cart contents
+ Then the product name, price, quantity, and image should match the selected product details.
+
+AC7: Continue Shopping or Checkout
+
+Given the Grey Jacket product is present in the cart
+ When the user views the cart
+ Then the user should be able to continue shopping or proceed to checkout.
+
+AC8: No Application Errors
+
+Given the user adds the Grey Jacket product to the cart
+ When the operation is completed
+ Then no application errors, broken pages, or unexpected behaviors should occur.
+
+Expected Result
+
+The user successfully adds the Grey Jacket product to the cart from the product details page. The cart is updated correctly, the product information remains accurate, and the user can proceed to checkout without encountering any errors.
 

@@ -1,0 +1,28 @@
+{
+  "totalElements": 14,
+  "needsAttention": [
+    {
+      "elementDescription": "Main shopping cart Grey Jacket quantity",
+      "attemptedSelectors": [
+        "id=updates_611945025",
+        "css=form:has(#checkout) .row:has(h3 a[href*=\"/products/grey-jacket\"]) input[name=\"updates[]\"]"
+      ],
+      "workingSelector": "css=form:has(#checkout) .row:has(h3 a[href*=\"/products/grey-jacket\"]) input[name=\"updates[]\"]",
+      "selectorType": "css-selector",
+      "attemptsUntilSuccess": 2,
+      "timestamp": "2026-10-28T06:47:01.071Z"
+    },
+    {
+      "elementDescription": "Main shopping cart Grey Jacket image",
+      "attemptedSelectors": [
+        "alt=/^Grey jacket - Grey jacket$/i",
+        "css=form:has(#checkout) .row:has(h3 a[href*=\"/products/grey-jacket\"]) img"
+      ],
+      "workingSelector": "css=form:has(#checkout) .row:has(h3 a[href*=\"/products/grey-jacket\"]) img",
+      "selectorType": "css-selector",
+      "attemptsUntilSuccess": 2,
+      "timestamp": "2026-10-28T06:47:01.103Z"
+    }
+  ],
+  "selectorSuccessRates": {}
+}

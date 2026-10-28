@@ -1,0 +1,125 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e5]:
+        - search:
+          - button "Submit" [ref=e6] [cursor=pointer]
+          - textbox "Search" [ref=e7]
+      - navigation [ref=e9]:
+        - link "Search" [ref=e10] [cursor=pointer]:
+          - /url: /search
+        - link "About Us" [ref=e11] [cursor=pointer]:
+          - /url: /pages/about-us
+        - link "Log In" [ref=e12] [cursor=pointer]:
+          - /url: /account/login
+        - link "Sign up" [ref=e13] [cursor=pointer]:
+          - /url: /account/register
+      - generic [ref=e15]:
+        - link "My Cart (0)" [ref=e16] [cursor=pointer]:
+          - /url: "#"
+        - link "Check Out" [ref=e17] [cursor=pointer]:
+          - /url: /cart
+    - generic [ref=e20]:
+      - heading "Sauce Demo" [level=1] [ref=e22]:
+        - link "Sauce Demo" [ref=e23] [cursor=pointer]:
+          - /url: /
+          - img "Sauce Demo" [ref=e24]
+      - heading "Just a demo site showing off what Sauce can do." [level=3] [ref=e27]
+  - generic [ref=e28]:
+    - navigation [ref=e30]:
+      - list [ref=e31]:
+        - listitem [ref=e32]:
+          - link "Home" [ref=e33] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e34]:
+          - link "Catalog" [ref=e35] [cursor=pointer]:
+            - /url: /collections/all
+        - listitem [ref=e36]:
+          - link "Blog" [ref=e37] [cursor=pointer]:
+            - /url: /blogs/news
+        - listitem [ref=e38]:
+          - link "About Us" [ref=e39] [cursor=pointer]:
+            - /url: /pages/about-us
+        - listitem [ref=e40]:
+          - link "Wish list" [ref=e41] [cursor=pointer]:
+            - /url: "#sauce-show-wish-list"
+        - listitem [ref=e42]:
+          - link "Refer a friend" [ref=e43] [cursor=pointer]:
+            - /url: "#sauce-show-refer-friend"
+      - generic [ref=e44]:
+        - link [ref=e45] [cursor=pointer]:
+          - /url: http://www.facebook.com/shopify
+        - link [ref=e46] [cursor=pointer]:
+          - /url: http://www.twitter.com/sauce_io
+        - link [ref=e47] [cursor=pointer]:
+          - /url: http://www.instagram.com/shopify
+        - link [ref=e48] [cursor=pointer]:
+          - /url: http://www.pinterest.com/chrisjhoughton/awesome-facebook-integration/
+        - link [ref=e49] [cursor=pointer]:
+          - /url: /blogs/news.atom
+    - generic [ref=e51]:
+      - generic [ref=e52]:
+        - link "Home" [ref=e54] [cursor=pointer]:
+          - /url: /
+        - text: —
+        - link "Search" [ref=e55] [cursor=pointer]:
+          - /url: /search
+      - heading "Search Results" [level=1] [ref=e56]
+      - generic [ref=e57]: Showing results for Grey Jacket
+      - generic [ref=e58]:
+        - link "Grey jacket Grey jacket £55.00" [ref=e60] [cursor=pointer]:
+          - /url: /products/grey-jacket?_pos=1&_sid=ad33c2692&_ss=r
+          - img "Grey jacket" [ref=e61]
+          - heading "Grey jacket" [level=3] [ref=e62]
+          - heading "£55.00" [level=4] [ref=e63]
+        - link "Noir jacket Noir jacket £60.00" [ref=e65] [cursor=pointer]:
+          - /url: /products/noir-jacket?_pos=2&_sid=ad33c2692&_ss=r
+          - img "Noir jacket" [ref=e66]
+          - heading "Noir jacket" [level=3] [ref=e67]
+          - heading "£60.00" [level=4] [ref=e68]
+        - link "Striped top Striped top £50.00" [ref=e70] [cursor=pointer]:
+          - /url: /products/striped-top?_pos=3&_sid=ad33c2692&_ss=r
+          - img "Striped top" [ref=e71]
+          - heading "Striped top" [level=3] [ref=e72]
+          - heading "£50.00" [level=4] [ref=e73]
+        - link "Sold Out Brown Shades Brown Shades £20.00" [ref=e75] [cursor=pointer]:
+          - /url: /products/brown-shades?_pos=4&_sid=ad33c2692&_ss=r
+          - generic [ref=e76]: Sold Out
+          - img "Brown Shades" [ref=e77]
+          - heading "Brown Shades" [level=3] [ref=e78]
+          - heading "£20.00" [level=4] [ref=e79]
+    - contentinfo [ref=e80]:
+      - generic [ref=e81]:
+        - navigation [ref=e83]:
+          - heading "Footer" [level=2] [ref=e84]
+          - link "Search" [ref=e85] [cursor=pointer]:
+            - /url: /search
+          - link "About Us" [ref=e86] [cursor=pointer]:
+            - /url: /pages/about-us
+        - generic [ref=e88]:
+          - heading "About Us" [level=2] [ref=e89]
+          - paragraph [ref=e91]:
+            - strong [ref=e92]:
+              - text: This is a demo site created for
+              - link "Sauce" [ref=e93] [cursor=pointer]:
+                - /url: http://sauceapp.io
+            - text: ", an awesome new way to make your Shopify site social. Sauce allows you to let customers to share what they purchase to their friends, and see what their friends have purchased or \"wanted\" on your store."
+        - generic [ref=e95]:
+          - img "We accept Amex" [ref=e96]
+          - img "We accept Visa" [ref=e97]
+          - img "We accept Mastercard" [ref=e98]
+      - generic [ref=e99]:
+        - generic [ref=e101]:
+          - text: Copyright © 2026 Sauce Demo.
+          - link "Shopping Cart by Shopify" [ref=e102] [cursor=pointer]:
+            - /url: https://www.shopify.co.uk/tour/shopping-cart?utm_campaign=poweredby&utm_medium=shopify&utm_source=onlinestore
+          - text: .
+        - navigation [ref=e104]:
+          - link "Search" [ref=e105] [cursor=pointer]:
+            - /url: /search
+          - link "About Us" [ref=e106] [cursor=pointer]:
+            - /url: /pages/about-us
+```

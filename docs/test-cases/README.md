@@ -44,6 +44,18 @@ This directory contains detailed test cases for each component based on requirem
    - Accessibility coverage with current live-page findings documented
    - Account-creation flows marked blocked while Shopify sign-up is disabled
 
+6. [Sauce Demo Search Product](./saucedemo-search-product.test-cases.md)
+   - Dedicated Grey Jacket search coverage mapped to AC1-AC6
+   - Product details/availability, relevance, navigation, errors, and response time
+   - Keyboard, accessibility, mixed-case, and desktop/mobile checks
+   - Test-case scope approved by user on 2026-10-28
+
+7. [Sauce Demo Add To Cart](./saucedemo-add-to-cart.test-cases.md)
+   - Grey Jacket single/repeated additions, pricing, quantity, and persistence
+   - Reuses Search Product for search-to-cart integration
+   - Keyboard, accessibility, performance, and desktop/mobile coverage
+   - Test-case scope approved by user on 2026-10-28
+
 ## Best Practices
 1. Keep test cases updated when requirements change
 2. Maintain traceability between requirements and test cases

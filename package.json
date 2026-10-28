@@ -6,6 +6,8 @@
   "scripts": {
     "mcp:start": "npx @executeautomation/playwright-mcp-server",
     "test": "npx cross-env TEST_ENV=prod npx playwright test",
+    "test:search": "playwright test tests/specs/searchProductComponent.spec.ts --project=chromium",
+    "test:cart": "playwright test tests/specs/addToCartComponent.spec.ts --project=chromium",
     "test:spec": "npx cross-env TEST_ENV=prod npx playwright test tests/specs/SideBar.spec.ts",
     "vrt:test": "npx cross-env TEST_ENV=prod npx playwright test tests/specs/visual-regression.spec.ts",
     "vrt:baseline": "npx cross-env TEST_ENV=prod npx playwright test tests/specs/visual-regression.spec.ts --grep \"Create Baseline Screenshots\"",

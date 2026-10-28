@@ -1,0 +1,2 @@
+⚠️ SmartLocator: Primary selector failed for "Header navigation to full shopping cart". Consider updating tests.
+⚠️ SmartLocator: Primary selector failed for "Header navigation to full shopping cart". Consider updating tests.

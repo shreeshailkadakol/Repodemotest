@@ -1,0 +1,2 @@
+⚠️ SmartLocator: Primary selector failed for "Main shopping cart Grey Jacket quantity". Consider updating tests.
+⚠️ SmartLocator: Primary selector failed for "Main shopping cart Grey Jacket image". Consider updating tests.
