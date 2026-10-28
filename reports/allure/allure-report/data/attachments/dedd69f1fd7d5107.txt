@@ -1,0 +1,1 @@
+✅ SmartLocator: Found "Login password field" using semantic-placeholder (attempt 1/4)

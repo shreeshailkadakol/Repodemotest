@@ -1,0 +1,28 @@
+{
+  "totalElements": 14,
+  "needsAttention": [
+    {
+      "elementDescription": "Header navigation to full shopping cart",
+      "attemptedSelectors": [
+        "role=link, name=/^Check Out$/i",
+        "css=header a[href=\"/cart\"]:visible"
+      ],
+      "workingSelector": "css=header a[href=\"/cart\"]:visible",
+      "selectorType": "css-selector",
+      "attemptsUntilSuccess": 2,
+      "timestamp": "2026-10-28T09:41:11.979Z"
+    },
+    {
+      "elementDescription": "Header navigation to full shopping cart",
+      "attemptedSelectors": [
+        "role=link, name=/^Check Out$/i",
+        "css=header a[href=\"/cart\"]:visible"
+      ],
+      "workingSelector": "css=header a[href=\"/cart\"]:visible",
+      "selectorType": "css-selector",
+      "attemptsUntilSuccess": 2,
+      "timestamp": "2026-10-28T09:41:11.986Z"
+    }
+  ],
+  "selectorSuccessRates": {}
+}

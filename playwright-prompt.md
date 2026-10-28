@@ -1507,3 +1507,51 @@ Expected Result
 
 The user successfully adds the Grey Jacket product to the cart from the product details page. The cart is updated correctly, the product information remains accurate, and the user can proceed to checkout without encountering any errors.
 
+
+**Select Cart from Header, Navigate to Cart Page, and Proceed to Checkout**
+Brief Description
+
+This feature allows a user to access the shopping cart by selecting the Cart icon available in the website header. Once navigated to the Cart Page, the user can review the selected products and click the Checkout button to start the checkout process. This ensures a smooth transition from cart review to order completion.
+
+User Story
+
+As a customer, I want to select the cart option from the header, review the items in my cart, and click the checkout button so that I can proceed with purchasing the selected products.
+
+Acceptance Criteria
+Scenario 1: Navigate to Cart Page from Header
+
+Given the user is logged in and has added one or more products to the cart
+ When the user clicks the Cart icon in the header
+ Then the user should be navigated to the Cart Page
+ And all previously added products should be displayed in the cart
+
+Scenario 2: Verify Cart Details
+
+Given the user is on the Cart Page
+ When the cart page is displayed
+ Then the product name, quantity, description, and price should be visible for each cart item
+ And the cart information should match the products added previously
+
+Scenario 3: Proceed to Checkout
+
+Given the user is on the Cart Page and at least one item exists in the cart
+ When the user clicks the Checkout button
+ Then the user should be redirected to the Checkout Information page
+ And the First Name, Last Name, and Postal Code fields should be displayed
+
+Scenario 4: Cart Badge Validation
+
+Given the user has added products to the cart
+ When the user views the Cart icon in the header
+ Then the cart badge should display the correct number of items added to the cart
+
+Scenario 5: Checkout Button Availability
+
+Given the user is on the Cart Page with items in the cart
+ When the page loads successfully
+ Then the Checkout button should be enabled and clickable
+
+Expected Result
+
+The user can successfully click the Cart icon from the header, navigate to the Cart Page, verify cart details, and click the Checkout button to proceed to the checkout information page without any errors.
+

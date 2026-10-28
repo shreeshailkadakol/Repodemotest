@@ -1,0 +1,3 @@
+✅ SmartLocator: Found "Login username field" using semantic-placeholder (attempt 1/6)
+✅ SmartLocator: Found "Login password field" using semantic-placeholder (attempt 1/4)
+✅ SmartLocator: Found "Login button" using semantic-role (attempt 1/4)
