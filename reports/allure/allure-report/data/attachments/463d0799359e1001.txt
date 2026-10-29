@@ -1,0 +1,2 @@
+✅ SmartLocator: Found "Registration email field" using css-selector (attempt 1/2)
+✅ SmartLocator: Found "Registration email field" using css-selector (attempt 1/2)

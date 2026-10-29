@@ -1,0 +1,30 @@
+{
+  "totalElements": 10,
+  "needsAttention": [],
+  "selectorSuccessRates": {
+    "role=heading, name=/^Grey jacket$/i": {
+      "rate": 1,
+      "attempts": 1
+    },
+    "id=product-price": {
+      "rate": 1,
+      "attempts": 1
+    },
+    "role=button, name=/^Add to Cart$/i": {
+      "rate": 1,
+      "attempts": 4
+    },
+    "role=link, name=/^My Cart/i": {
+      "rate": 1,
+      "attempts": 1
+    },
+    "role=link, name=/^Check Out$/i": {
+      "rate": 1,
+      "attempts": 2
+    },
+    "css=form:has(#checkout) .row:has(h3 a[href*=\"/products/\"])": {
+      "rate": 1,
+      "attempts": 1
+    }
+  }
+}

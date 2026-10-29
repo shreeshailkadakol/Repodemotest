@@ -14,6 +14,7 @@
     "vrt:cleanup:dry": "npx ts-node helpers/utils/vrt-cleanup.ts --dry-run",
     "allure:generate": "allure generate ./reports/allure/allure-results --clean -o ./reports/allure/allure-report",
     "allure:open": "allure open ./reports/allure/allure-report",
+    "test:sanity": "npx cross-env TEST_ENV=qa npx playwright test tests/specs/sanityComponent.spec.ts",
     "test:allure": "npm run test && npm run allure:generate && npm run allure:open",
     "test:chromium:desktop": "npx cross-env TEST_ENV=prod npx playwright test tests/specs/SideBar.spec.ts --project=\"Desktop Full HD\"",
     "test:chromium:macbook": "npx cross-env TEST_ENV=prod npx playwright test tests/specs/SideBar.spec.ts --project=\"MacBook Pro\"",

@@ -15,11 +15,14 @@ import {
 } from '@playwright/test/reporter';
 import * as fs from 'fs/promises';
 import * as path from 'path';
-import { smartLocator } from './smartLocator';
 
 export default class SelectorHealthReporter implements Reporter {
   private outputDir: string;
   private config: FullConfig | undefined;
+  // Tests run in worker processes, so health data is collected from per-test attachments
+  private totalElements = 0;
+  private needsAttention: any[] = [];
+  private rates = new Map<string, { successes: number; attempts: number }>();
 
   constructor(options: { outputDir?: string } = {}) {
     this.outputDir = options.outputDir || './reports/selector-health';
@@ -33,10 +36,38 @@ export default class SelectorHealthReporter implements Reporter {
     await fs.mkdir(this.outputDir, { recursive: true });
   }
 
+  onTestEnd(test: TestCase, result: TestResult): void {
+    for (const attachment of result.attachments) {
+      if (attachment.name !== 'selector-health' || !attachment.body) continue;
+      try {
+        const data = JSON.parse(attachment.body.toString());
+        this.totalElements += data.totalElements || 0;
+        this.needsAttention.push(...(data.needsAttention || []));
+        for (const [selector, stats] of Object.entries<any>(data.selectorSuccessRates || {})) {
+          const current = this.rates.get(selector) || { successes: 0, attempts: 0 };
+          current.attempts += stats.attempts;
+          current.successes += stats.rate * stats.attempts;
+          this.rates.set(selector, current);
+        }
+      } catch {
+        // Ignore malformed attachments
+      }
+    }
+  }
+
   async onEnd(result: FullResult): Promise<void> {
     console.log('\n📊 Generating Selector Health Report...');
 
-    const healthReport = smartLocator.getHealthReport();
+    const healthReport = {
+      totalElements: this.totalElements,
+      needsAttention: this.needsAttention,
+      selectorSuccessRates: new Map<string, { rate: number; attempts: number }>(
+        Array.from(this.rates.entries()).map(([selector, stats]) => [
+          selector,
+          { rate: stats.successes / stats.attempts, attempts: stats.attempts },
+        ])
+      ),
+    };
 
     // Generate HTML report
     await this.generateHTMLReport(healthReport);
@@ -46,9 +77,6 @@ export default class SelectorHealthReporter implements Reporter {
 
     // Print summary to console
     this.printConsoleSummary(healthReport);
-
-    // Reset for next run
-    smartLocator.reset();
   }
 
   private async generateHTMLReport(healthReport: any): Promise<void> {
@@ -179,7 +207,7 @@ export default class SelectorHealthReporter implements Reporter {
       <div class="stat-label">Need Attention</div>
     </div>
     <div class="stat-card">
-      <div class="stat-value">${((healthReport.totalElements - healthReport.needsAttention.length) / healthReport.totalElements * 100).toFixed(1)}%</div>
+      <div class="stat-value">${healthReport.totalElements > 0 ? ((healthReport.totalElements - healthReport.needsAttention.length) / healthReport.totalElements * 100).toFixed(1) : '0.0'}%</div>
       <div class="stat-label">Healthy Selectors</div>
     </div>
   </div>

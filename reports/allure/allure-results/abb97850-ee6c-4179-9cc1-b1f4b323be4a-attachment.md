@@ -1,0 +1,66 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e5]:
+        - search:
+          - button "Submit" [ref=e6] [cursor=pointer]
+          - textbox "Search" [ref=e7]
+      - link "My Cart (0)" [ref=e10]:
+        - /url: /cart
+    - heading "Sauce Demo" [level=1] [ref=e15]:
+      - link "Sauce Demo" [ref=e16]:
+        - /url: /
+        - img "Sauce Demo" [ref=e17]
+  - generic [ref=e18]:
+    - navigation [ref=e20]:
+      - link "Menu" [ref=e21]:
+        - /url: "#"
+        - generic [ref=e22]: Menu
+    - generic [ref=e25]:
+      - img "Grey jacket" [ref=e27]
+      - generic [ref=e29]:
+        - heading "Grey jacket" [level=1] [ref=e30]
+        - heading "£55.00" [level=2] [ref=e31]
+        - combobox [ref=e34]:
+          - option "Grey jacket" [selected]
+        - button "Add to Cart" [ref=e35] [cursor=pointer]
+      - generic [ref=e37]:
+        - text: This area is populated by the product description. If you ever run out of things to say about what you're selling then take a look at
+        - link "9 ways to write compelling product descriptions" [ref=e38]:
+          - /url: http://www.shopify.ca/blog/8211159-9-simple-ways-to-write-product-descriptions-that-sell
+        - text: . In Theme Settings you can also change render the product description to the write of the product images.X
+    - contentinfo [ref=e39]:
+      - generic [ref=e40]:
+        - navigation [ref=e42]:
+          - heading "Footer" [level=2] [ref=e43]
+          - link "Search" [ref=e44]:
+            - /url: /search
+          - link "About Us" [ref=e45]:
+            - /url: /pages/about-us
+        - generic [ref=e47]:
+          - heading "About Us" [level=2] [ref=e48]
+          - paragraph [ref=e50]:
+            - strong [ref=e51]:
+              - text: This is a demo site created for
+              - link "Sauce" [ref=e52]:
+                - /url: http://sauceapp.io
+            - text: ", an awesome new way to make your Shopify site social. Sauce allows you to let customers to share what they purchase to their friends, and see what their friends have purchased or \"wanted\" on your store."
+        - generic [ref=e54]:
+          - img "We accept Amex" [ref=e55]
+          - img "We accept Visa" [ref=e56]
+          - img "We accept Mastercard" [ref=e57]
+      - generic:
+        - generic [ref=e59]:
+          - text: Copyright © 2026 Sauce Demo.
+          - link "Shopping Cart by Shopify" [ref=e60]:
+            - /url: https://www.shopify.co.uk/tour/shopping-cart?utm_campaign=poweredby&utm_medium=shopify&utm_source=onlinestore
+          - text: .
+        - navigation [ref=e62]:
+          - link "Search" [ref=e63]:
+            - /url: /search
+          - link "About Us" [ref=e64]:
+            - /url: /pages/about-us
+```

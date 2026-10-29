@@ -1,0 +1,14 @@
+{
+  "totalElements": 3,
+  "needsAttention": [],
+  "selectorSuccessRates": {
+    "role=button, name=/^Add to Cart$/i": {
+      "rate": 1,
+      "attempts": 2
+    },
+    "role=link, name=/^My Cart/i": {
+      "rate": 1,
+      "attempts": 1
+    }
+  }
+}

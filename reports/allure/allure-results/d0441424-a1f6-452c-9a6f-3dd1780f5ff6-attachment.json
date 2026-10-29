@@ -1,0 +1,53 @@
+{
+  "totalElements": 11,
+  "needsAttention": [
+    {
+      "elementDescription": "Header Cart link navigating to the cart page",
+      "attemptedSelectors": [
+        "role=link, name=/^Check Out$/i",
+        "css=header a[href=\"/cart\"]:visible"
+      ],
+      "workingSelector": "css=header a[href=\"/cart\"]:visible",
+      "selectorType": "css-selector",
+      "attemptsUntilSuccess": 2,
+      "timestamp": "2026-10-28T10:20:05.407Z"
+    },
+    {
+      "elementDescription": "Header Cart link navigating to the cart page",
+      "attemptedSelectors": [
+        "role=link, name=/^Check Out$/i",
+        "css=header a[href=\"/cart\"]:visible"
+      ],
+      "workingSelector": "css=header a[href=\"/cart\"]:visible",
+      "selectorType": "css-selector",
+      "attemptsUntilSuccess": 2,
+      "timestamp": "2026-10-28T10:20:05.418Z"
+    }
+  ],
+  "selectorSuccessRates": {
+    "role=heading, name=/^Grey jacket$/i": {
+      "rate": 1,
+      "attempts": 1
+    },
+    "id=product-price": {
+      "rate": 1,
+      "attempts": 1
+    },
+    "role=button, name=/^Add to Cart$/i": {
+      "rate": 1,
+      "attempts": 4
+    },
+    "role=link, name=/^My Cart/i": {
+      "rate": 1,
+      "attempts": 1
+    },
+    "css=header a[href=\"/cart\"]:visible": {
+      "rate": 1,
+      "attempts": 2
+    },
+    "role=button, name=/^Check Out$/i": {
+      "rate": 1,
+      "attempts": 2
+    }
+  }
+}

@@ -44,6 +44,18 @@ This directory contains detailed test cases for each component based on requirem
    - Accessibility coverage with current live-page findings documented
    - Account-creation flows marked blocked while Shopify sign-up is disabled
 
+6. [Sauce Demo Add to Cart (Grey Jacket)](./saucedemo-add-to-cart.test-cases.md)
+   - Catalog navigation, product details, add to cart, cart indicator and cart contents
+   - Product/cart data consistency and continue-shopping/checkout availability
+   - Accessibility scan currently exposes site defects
+
+7. [Sauce Demo Cart Header, Cart Page and Checkout](./saucedemo-cart-checkout.test-cases.md)
+   - Header cart link and count, mini-cart drawer (desktop) / cart navigation (mobile)
+   - Cart page contents and proceeding to the checkout page (checkout form is never submitted)
+
+8. [Sauce Demo Sanity Journey](./saucedemo-sanity.test-cases.md)
+   - Login, add to cart, cart verification and reaching checkout in one journey
+
 ## Best Practices
 1. Keep test cases updated when requirements change
 2. Maintain traceability between requirements and test cases

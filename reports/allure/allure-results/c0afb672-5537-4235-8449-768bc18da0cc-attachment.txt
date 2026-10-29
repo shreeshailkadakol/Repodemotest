@@ -1,0 +1,1 @@
+✅ SmartLocator: Found "Grey Jacket catalog item" using css-selector (attempt 1/2)

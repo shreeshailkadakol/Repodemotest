@@ -1,0 +1,5 @@
+✅ SmartLocator: Found "Grey Jacket catalog item" using css-selector (attempt 1/2)
+✅ SmartLocator: Found "Grey Jacket catalog item" using css-selector (attempt 1/2)
+✅ SmartLocator: Found "Product title" using semantic-role (attempt 1/3)
+✅ SmartLocator: Found "Product price" using css-selector (attempt 1/2)
+✅ SmartLocator: Found "Add to cart button" using semantic-role (attempt 1/3)

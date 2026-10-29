@@ -1,0 +1,79 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e5]:
+        - search:
+          - button "Submit" [ref=e6] [cursor=pointer]
+          - textbox "Search" [ref=e7]
+      - link "My Cart (1)" [ref=e10]:
+        - /url: /cart
+    - heading "Sauce Demo" [level=1] [ref=e15]:
+      - link "Sauce Demo" [ref=e16]:
+        - /url: /
+        - img "Sauce Demo" [ref=e17]
+  - generic [ref=e18]:
+    - navigation [ref=e20]:
+      - link "Menu" [ref=e21]:
+        - /url: "#"
+        - generic [ref=e22]: Menu
+    - generic [ref=e24]:
+      - heading "My Cart" [level=1] [ref=e25]
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - generic [ref=e30]: Description
+          - generic [ref=e31]:
+            - generic [ref=e32]:
+              - img "Grey jacket - Grey jacket" [ref=e33]
+              - generic [ref=e34]:
+                - heading "Grey jacket - Grey jacket" [level=3] [ref=e35]:
+                  - link "Grey jacket - Grey jacket" [ref=e36]:
+                    - /url: /collections/all/products/grey-jacket
+                - heading "Sauce Demo" [level=4] [ref=e37]
+                - paragraph [ref=e38]: This area is populated by the product description. If you ever run out of things to say about what you're...
+            - generic [ref=e39]:
+              - textbox [ref=e40]: "1"
+              - paragraph [ref=e41]: x £55.00
+        - generic [ref=e42]:
+          - link "« Continue Shopping" [ref=e44]:
+            - /url: /collections/all
+          - heading "Total £55.00" [level=2] [ref=e46]
+        - generic [ref=e47]:
+          - textbox "Add a note to your order..." [ref=e49]
+          - generic [ref=e50]:
+            - button "Update" [ref=e51] [cursor=pointer]
+            - button "Check Out" [ref=e52] [cursor=pointer]
+    - contentinfo [ref=e53]:
+      - generic [ref=e54]:
+        - navigation [ref=e56]:
+          - heading "Footer" [level=2] [ref=e57]
+          - link "Search" [ref=e58]:
+            - /url: /search
+          - link "About Us" [ref=e59]:
+            - /url: /pages/about-us
+        - generic [ref=e61]:
+          - heading "About Us" [level=2] [ref=e62]
+          - paragraph [ref=e64]:
+            - strong [ref=e65]:
+              - text: This is a demo site created for
+              - link "Sauce" [ref=e66]:
+                - /url: http://sauceapp.io
+            - text: ", an awesome new way to make your Shopify site social. Sauce allows you to let customers to share what they purchase to their friends, and see what their friends have purchased or \"wanted\" on your store."
+        - generic [ref=e68]:
+          - img "We accept Amex" [ref=e69]
+          - img "We accept Visa" [ref=e70]
+          - img "We accept Mastercard" [ref=e71]
+      - generic:
+        - generic [ref=e73]:
+          - text: Copyright © 2026 Sauce Demo.
+          - link "Shopping Cart by Shopify" [ref=e74]:
+            - /url: https://www.shopify.co.uk/tour/shopping-cart?utm_campaign=poweredby&utm_medium=shopify&utm_source=onlinestore
+          - text: .
+        - navigation [ref=e76]:
+          - link "Search" [ref=e77]:
+            - /url: /search
+          - link "About Us" [ref=e78]:
+            - /url: /pages/about-us
+```

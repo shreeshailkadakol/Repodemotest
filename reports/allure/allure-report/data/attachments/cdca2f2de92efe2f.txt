@@ -1,0 +1,7 @@
+✅ SmartLocator: Found "Customer registration form" using css-selector (attempt 1/2)
+✅ SmartLocator: Found "Create account heading" using semantic-role (attempt 1/4)
+✅ SmartLocator: Found "Registration first name field" using css-selector (attempt 1/2)
+✅ SmartLocator: Found "Registration last name field" using css-selector (attempt 1/2)
+✅ SmartLocator: Found "Registration email field" using css-selector (attempt 1/2)
+✅ SmartLocator: Found "Registration password field" using css-selector (attempt 1/2)
+✅ SmartLocator: Found "Create account button" using semantic-role (attempt 1/3)

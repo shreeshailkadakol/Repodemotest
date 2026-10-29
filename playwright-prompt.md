@@ -1391,6 +1391,139 @@ Given the Register page is loaded
  When users navigate using keyboard or screen readers
  Then all fields, labels, and buttons should be accessible and compliant with basic accessibility standards.
 
+ **Sauce Demo – Select Product from Catalog and Add to Cart (Grey Jacket)**
+Feature Description
+
+The Catalog Navigation and Add to Cart feature allows users to browse the product catalog on the Sauce Demo website, select the Grey Jacket product, review its details, and add the item to the shopping cart. This functionality ensures a seamless shopping experience by enabling users to easily locate products and prepare them for checkout.
+
+Business Value
+Provides an intuitive product browsing experience.
+Enables customers to quickly select and purchase desired products.
+Ensures accurate product details are maintained throughout the shopping journey.
+Supports the checkout process by allowing products to be added to the cart.
+Acceptance Criteria
+AC1: Navigate to Product Catalog
+
+Given the user is on the Sauce Demo website
+ When the user accesses the product catalog page
+ Then the catalog should display all available products.
+
+AC2: Locate Grey Jacket Product
+
+Given the user is viewing the product catalog
+ When the user searches for or browses to the Grey Jacket product
+ Then the Grey Jacket product should be visible and selectable.
+
+AC3: Open Product Details Page
+
+Given the Grey Jacket product is displayed in the catalog
+ When the user selects the product
+ Then the product details page should open successfully.
+
+AC4: Display Product Information
+
+Given the Grey Jacket product details page is opened
+ When the page loads
+ Then the following information should be displayed:
+
+Product name: Grey Jacket
+Product image
+Product description
+Product price
+Add to Cart button
+AC5: Add Product to Cart
+
+Given the user is on the Grey Jacket product details page
+ When the user clicks the Add to Cart button
+ Then the product should be added to the shopping cart successfully.
+
+AC6: Update Cart Indicator
+
+Given the Grey Jacket product has been added to the cart
+ When the add-to-cart action is completed
+ Then the cart icon or cart count should be updated to reflect the added item.
+
+AC7: Verify Product in Cart
+
+Given the product has been added to the cart
+ When the user navigates to the shopping cart page
+ Then the cart should display:
+
+Grey Jacket product name
+Correct product price
+Product quantity
+Product image (if applicable)
+AC8: Product Information Consistency
+
+Given the Grey Jacket product appears in the shopping cart
+ When the user reviews the cart details
+ Then the product information should match the details shown on the product page.
+
+AC9: Continue Shopping or Checkout
+
+Given the Grey Jacket product is present in the cart
+ When the user views the cart page
+ Then the user should be able to:
+
+Continue shopping, or
+Proceed to checkout
+AC10: Error-Free Experience
+
+Given the user navigates the catalog and adds the Grey Jacket to the cart
+ When the process is completed
+ Then no error messages, broken links, page failures, or unexpected behavior should occur.
+
+Expected Result
+
+The user successfully navigates the product catalog, selects the Grey Jacket product, views the product details, adds the item to the cart, and verifies that the cart contains the correct product information, enabling them to proceed with their purchase journey.
+
+**Select Cart from Header, Navigate to Cart Page, and Proceed to Checkout**
+Brief Description
+
+This feature allows a user to access the shopping cart by selecting the Cart icon available in the website header. Once navigated to the Cart Page, the user can review the selected products and click the Checkout button to start the checkout process. This ensures a smooth transition from cart review to order completion.
+
+User Story
+
+As a customer, I want to select the cart option from the header, review the items in my cart, and click the checkout button so that I can proceed with purchasing the selected products.
+
+Acceptance Criteria
+Scenario 1: Navigate to Cart Page from Header
+
+Given the user is logged in and has added one or more products to the cart
+ When the user clicks the Cart icon in the header
+ Then the user should be navigated to the Cart Page
+ And all previously added products should be displayed in the cart
+
+Scenario 2: Verify Cart Details
+
+Given the user is on the Cart Page
+ When the cart page is displayed
+ Then the product name, quantity, description, and price should be visible for each cart item
+ And the cart information should match the products added previously
+
+Scenario 3: Proceed to Checkout
+
+Given the user is on the Cart Page and at least one item exists in the cart
+ When the user clicks the Checkout button
+ Then the user should be redirected to the Checkout Information page
+ And the First Name, Last Name, and Postal Code fields should be displayed
+
+Scenario 4: Cart Badge Validation
+
+Given the user has added products to the cart
+ When the user views the Cart icon in the header
+ Then the cart badge should display the correct number of items added to the cart
+
+Scenario 5: Checkout Button Availability
+
+Given the user is on the Cart Page with items in the cart
+ When the page loads successfully
+ Then the Checkout button should be enabled and clickable
+
+Expected Result
+
+The user can successfully click the Cart icon from the header, navigate to the Cart Page, verify cart details, and click the Checkout button to proceed to the checkout information page without any errors.
+
 
 
 

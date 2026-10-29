@@ -1,0 +1,2 @@
+⚠️ SmartLocator: Primary selector failed for "Header Cart link navigating to the cart page". Consider updating tests.
+⚠️ SmartLocator: Primary selector failed for "Header Cart link navigating to the cart page". Consider updating tests.

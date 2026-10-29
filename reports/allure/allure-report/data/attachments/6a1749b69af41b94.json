@@ -1,0 +1,26 @@
+{
+  "totalElements": 14,
+  "needsAttention": [],
+  "selectorSuccessRates": {
+    "role=link, name=/^My Cart/i": {
+      "rate": 1,
+      "attempts": 4
+    },
+    "role=heading, name=/^Grey jacket$/i": {
+      "rate": 1,
+      "attempts": 1
+    },
+    "id=product-price": {
+      "rate": 1,
+      "attempts": 1
+    },
+    "role=button, name=/^Add to Cart$/i": {
+      "rate": 1,
+      "attempts": 6
+    },
+    "role=link, name=/^Check Out$/i": {
+      "rate": 1,
+      "attempts": 2
+    }
+  }
+}

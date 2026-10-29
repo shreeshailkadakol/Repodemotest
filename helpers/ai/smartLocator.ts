@@ -298,7 +298,7 @@ Suggestions:
     const needsAttention = this.healthReports.filter((report) => report.attemptsUntilSuccess > 1);
 
     // Calculate success rates
-    const successRates = new Map<string, { rate: number; attempts: number }>();
+    const successRates = new SerializableMap<string, { rate: number; attempts: number }>();
     for (const [selector, stats] of this.selectorSuccessRates.entries()) {
       successRates.set(selector, {
         rate: stats.successes / stats.attempts,
@@ -355,6 +355,13 @@ Suggestions:
   reset(): void {
     this.healthReports = [];
     this.selectorSuccessRates.clear();
+  }
+}
+
+// Map that survives JSON.stringify (specs attach the health report as JSON)
+class SerializableMap<K extends string, V> extends Map<K, V> {
+  toJSON(): Record<string, V> {
+    return Object.fromEntries(this);
   }
 }
 

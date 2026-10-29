@@ -1,0 +1,42 @@
+{
+  "totalElements": 12,
+  "needsAttention": [],
+  "selectorSuccessRates": {
+    "role=heading, name=/^Grey jacket$/i": {
+      "rate": 1,
+      "attempts": 1
+    },
+    "id=product-price": {
+      "rate": 1,
+      "attempts": 1
+    },
+    "role=button, name=/^Add to Cart$/i": {
+      "rate": 1,
+      "attempts": 3
+    },
+    "role=link, name=/^My Cart/i": {
+      "rate": 1,
+      "attempts": 2
+    },
+    "role=link, name=/^Check Out$/i": {
+      "rate": 1,
+      "attempts": 1
+    },
+    "role=link, name=/^Grey jacket - Grey jacket$/i": {
+      "rate": 1,
+      "attempts": 1
+    },
+    "role=textbox, name=/^$/": {
+      "rate": 1,
+      "attempts": 1
+    },
+    "role=img, name=/^Grey jacket - Grey jacket$/i": {
+      "rate": 1,
+      "attempts": 1
+    },
+    "role=heading, name=/^Total\\s+\\u00a3/": {
+      "rate": 1,
+      "attempts": 1
+    }
+  }
+}
