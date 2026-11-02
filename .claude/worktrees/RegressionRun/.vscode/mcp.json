@@ -1,0 +1,41 @@
+{
+  "servers": {
+    "playwright": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@executeautomation/playwright-mcp-server"
+      ]
+    },
+    "figma": {
+      "type": "stdio",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "figma-developer-mcp",
+        "--figma-api-key=${env:FIGMA_TOKEN}",
+        "--stdio"
+      ]
+    },
+    "azure-devops": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@azure-devops/mcp",
+        "Bayer-SMO-UniNetHub",
+        "-d",
+        "core",
+        "work",
+        "work-items"
+      ],
+      "env": {
+        "ado_mcp_project": "BayCorpWeb",
+        "AZURE_DEVOPS_PAT": "${env:AZURE_DEVOPS_PAT}"
+      }
+    }
+  }
+}

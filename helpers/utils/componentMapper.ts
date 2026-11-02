@@ -27,7 +27,7 @@ export interface PageComponentConfig {
 }
 
 export class ComponentMapper {
-  private config: PageComponentConfig;
+  private config!: PageComponentConfig;
   private configPath: string;
 
   constructor(configPath: string = 'config/page-component-mapping.json') {

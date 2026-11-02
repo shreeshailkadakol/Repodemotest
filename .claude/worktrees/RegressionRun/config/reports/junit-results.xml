@@ -1,0 +1,16 @@
+<testsuites id="" name="" tests="3" failures="0" skipped="3" errors="0" time="0.5685920000000001">
+<testsuite name="urlRedirect.spec.ts" timestamp="2026-06-25T14:11:02.049Z" hostname="chromium-redirect-tests" tests="3" failures="0" skipped="3" time="0" errors="0">
+<testcase name="URL Redirect Validation Tests › Validate URL Redirects - Batch Processing" classname="urlRedirect.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="URL Redirect Validation Tests › Individual Redirect Tests" classname="urlRedirect.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Excel File Operations › Verify Excel file accessibility and structure" classname="urlRedirect.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+</testsuites>

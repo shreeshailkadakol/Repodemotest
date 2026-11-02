@@ -1,0 +1,771 @@
+{
+  "pages": [
+    {
+      "url": "https://bayer-beyond-qa-uk.vercel.app/en/",
+      "pageName": "Homepage",
+      "environment": "qa",
+      "components": [
+        {
+          "dataQa": "Header",
+          "componentName": "HeaderComponent",
+          "specFile": "tests/specs/header.spec.ts",
+          "testTags": [
+            "@Header",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "homepage-hero",
+          "componentName": "HomepageHeroComponent",
+          "specFile": "tests/specs/homepageHero.spec.ts",
+          "testTags": [
+            "@HomepageHero",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "teaser-group",
+          "componentName": "TeaserGroupComponent",
+          "specFile": "tests/specs/teaserGroupComponent.spec.ts",
+          "testTags": [
+            "@TeaserGroup",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "individual-teaser",
+          "componentName": "IndividualTeaserComponent",
+          "specFile": "tests/specs/individualTeaserComponent.spec.ts",
+          "testTags": [
+            "@IndividualTeaser",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "banner-component",
+          "componentName": "BannerComponent",
+          "specFile": "tests/specs/bannerSVariant.spec.ts",
+          "testTags": [
+            "@Banner",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-block",
+          "componentName": "FooterBlocksOfLinks",
+          "specFile": "tests/specs/footerBlocksOfLinks.spec.ts",
+          "testTags": [
+            "@FooterBlocks",
+            "@Functional"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://bayer-beyond-qa-uk.vercel.app/en/Develop/Test-Catalyst-Page/Content-Catalyst-Page/QADontDelete/QAAutomation/Sprint-9/TeaserGrid",
+      "pageName": "TeaserGrid Test Page",
+      "environment": "qa",
+      "components": [
+        {
+          "dataQa": "Header",
+          "componentName": "HeaderComponent",
+          "specFile": "tests/specs/header.spec.ts",
+          "testTags": [
+            "@Header",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "teaser-grid",
+          "componentName": "TeaserGridComponent",
+          "specFile": "tests/specs/teaserGrid.spec.ts",
+          "testTags": [
+            "@TeaserGrid",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "individual-teaser",
+          "componentName": "IndividualTeaserComponent",
+          "specFile": "tests/specs/individualTeaserComponent.spec.ts",
+          "testTags": [
+            "@IndividualTeaser",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-block",
+          "componentName": "FooterBlocksOfLinks",
+          "specFile": "tests/specs/footerBlocksOfLinks.spec.ts",
+          "testTags": [
+            "@FooterBlocks",
+            "@Functional"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://bayer-beyond-qa-uk.vercel.app/en/career/Early-Careers",
+      "pageName": "Early Careers",
+      "environment": "qa",
+      "components": [
+        {
+          "dataQa": "Header",
+          "componentName": "HeaderComponent",
+          "specFile": "tests/specs/header.spec.ts",
+          "testTags": [
+            "@Header",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-block",
+          "componentName": "FooterBlocksOfLinks",
+          "specFile": "tests/specs/footerBlocksOfLinks.spec.ts",
+          "testTags": [
+            "@FooterBlocks",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "breadcrumb",
+          "componentName": "BreadcrumbComponent",
+          "specFile": "tests/specs/breadcrumbComponent.spec.ts",
+          "testTags": [
+            "@Breadcrumb",
+            "@Functional"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://bayer-beyond-qa-uk.vercel.app/en/search",
+      "pageName": "Search Page",
+      "environment": "qa",
+      "components": [
+        {
+          "dataQa": "Header",
+          "componentName": "HeaderComponent",
+          "specFile": "tests/specs/header.spec.ts",
+          "testTags": [
+            "@Header",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-block",
+          "componentName": "FooterBlocksOfLinks",
+          "specFile": "tests/specs/footerBlocksOfLinks.spec.ts",
+          "testTags": [
+            "@FooterBlocks",
+            "@Functional"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.bayer.co.uk/en-gb",
+      "pageName": "Bayer UK Homepage",
+      "environment": "prod",
+      "components": [
+        {
+          "dataQa": "Header",
+          "componentName": "HeaderComponent",
+          "specFile": "tests/specs/header.spec.ts",
+          "testTags": [
+            "@Header",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "homepage-hero",
+          "componentName": "HomepageHeroComponent",
+          "specFile": "tests/specs/homepageHero.spec.ts",
+          "testTags": [
+            "@HomepageHero",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "teaser-grid",
+          "componentName": "TeaserGridComponent",
+          "specFile": "tests/specs/teaserGrid.spec.ts",
+          "testTags": [
+            "@TeaserGrid",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "individual-teaser",
+          "componentName": "IndividualTeaserComponent",
+          "specFile": "tests/specs/individualTeaserComponent.spec.ts",
+          "testTags": [
+            "@IndividualTeaser",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "banner-component",
+          "componentName": "BannerComponent",
+          "specFile": "tests/specs/bannerSVariant.spec.ts",
+          "testTags": [
+            "@Banner",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "news-list",
+          "componentName": "NewsListComponent",
+          "specFile": "tests/specs/newsListComponent.spec.ts",
+          "testTags": [
+            "@NewsList",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-block",
+          "componentName": "FooterBlocksOfLinks",
+          "specFile": "tests/specs/footerBlocksOfLinks.spec.ts",
+          "testTags": [
+            "@FooterBlocks",
+            "@Functional"
+          ]
+        }
+      ],
+      "scannedAt": "2026-03-14T20:50:56.279Z"
+    },
+    {
+      "url": "https://bayer-beyond-prod-uk.vercel.app/en-gb",
+      "pageName": "Bayer UK Vercel Prod",
+      "environment": "prod_vercel",
+      "components": [
+        {
+          "dataQa": "Header",
+          "componentName": "HeaderComponent",
+          "specFile": "tests/specs/header.spec.ts",
+          "testTags": [
+            "@Header",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "select-location-button",
+          "componentName": "LocationComponent",
+          "specFile": "tests/specs/location.spec.ts",
+          "testTags": [
+            "@Location",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "homepage-hero",
+          "componentName": "HomepageHeroComponent",
+          "specFile": "tests/specs/homepageHero.spec.ts",
+          "testTags": [
+            "@HomepageHero",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "teaser-grid",
+          "componentName": "TeaserGridComponent",
+          "specFile": "tests/specs/teaserGrid.spec.ts",
+          "testTags": [
+            "@TeaserGrid",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "individual-teaser",
+          "componentName": "IndividualTeaserComponent",
+          "specFile": "tests/specs/individualTeaserComponent.spec.ts",
+          "testTags": [
+            "@IndividualTeaser",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "banner-component",
+          "componentName": "BannerComponent",
+          "specFile": "tests/specs/bannerSVariant.spec.ts",
+          "testTags": [
+            "@Banner",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "news-list",
+          "componentName": "NewsListComponent",
+          "specFile": "tests/specs/newsListComponent.spec.ts",
+          "testTags": [
+            "@NewsList",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-block",
+          "componentName": "FooterBlocksOfLinks",
+          "specFile": "tests/specs/footerBlocksOfLinks.spec.ts",
+          "testTags": [
+            "@FooterBlocks",
+            "@Functional"
+          ]
+        }
+      ],
+      "scannedAt": "2026-03-20T15:57:25.139Z"
+    },
+    {
+      "url": "https://bayer-beyond-prod-in.vercel.app/en-in",
+      "pageName": "Bayer India Vercel Prod",
+      "environment": "prod_in",
+      "components": [
+        {
+          "dataQa": "Header",
+          "componentName": "HeaderComponent",
+          "specFile": "tests/specs/header.spec.ts",
+          "testTags": [
+            "@Header",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "select-location-button",
+          "componentName": "LocationComponent",
+          "specFile": "tests/specs/location.spec.ts",
+          "testTags": [
+            "@Location",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "homepage-hero",
+          "componentName": "HomepageHeroComponent",
+          "specFile": "tests/specs/homepageHero.spec.ts",
+          "testTags": [
+            "@HomepageHero",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "teaser-group",
+          "componentName": "TeaserGroupComponent",
+          "specFile": "tests/specs/teaserGroupComponent.spec.ts",
+          "testTags": [
+            "@TeaserGroup",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "individual-teaser",
+          "componentName": "IndividualTeaserComponent",
+          "specFile": "tests/specs/individualTeaserComponent.spec.ts",
+          "testTags": [
+            "@IndividualTeaser",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "video-component",
+          "componentName": "VideoComponent",
+          "specFile": "tests/specs/videoComponent.spec.ts",
+          "testTags": [
+            "@Video",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "info-box",
+          "componentName": "InfoBoxComponent",
+          "specFile": "tests/specs/infoBoxComponent.spec.ts",
+          "testTags": [
+            "@InfoBox",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "news-list",
+          "componentName": "NewsListComponent",
+          "specFile": "tests/specs/newsListComponent.spec.ts",
+          "testTags": [
+            "@NewsList",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "teaser-grid",
+          "componentName": "TeaserGridComponent",
+          "specFile": "tests/specs/teaserGrid.spec.ts",
+          "testTags": [
+            "@TeaserGrid",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-block",
+          "componentName": "FooterBlocksOfLinks",
+          "specFile": "tests/specs/footerBlocksOfLinks.spec.ts",
+          "testTags": [
+            "@FooterBlocks",
+            "@Functional"
+          ]
+        }
+      ],
+      "scannedAt": "2026-03-20T16:14:54.317Z"
+    },
+    {
+      "url": "https://bayer-beyond-prod-taiwan.vercel.app/zh-tw/bayer/sustainability",
+      "pageName": "Bayer Taiwan Sustainability",
+      "environment": "prod",
+      "components": [
+        {
+          "dataQa": "Header",
+          "componentName": "HeaderComponent",
+          "specFile": "tests/specs/header.spec.ts",
+          "testTags": [
+            "@Header",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "stage-image-section",
+          "componentName": "StageComponent",
+          "specFile": "tests/specs/stageComponent.spec.ts",
+          "testTags": [
+            "@Stage",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "teaser-group",
+          "componentName": "TeaserGroupComponent",
+          "specFile": "tests/specs/teaserGroupComponent.spec.ts",
+          "testTags": [
+            "@TeaserGroup",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "individual-teaser",
+          "componentName": "IndividualTeaserComponent",
+          "specFile": "tests/specs/individualTeaserComponent.spec.ts",
+          "testTags": [
+            "@IndividualTeaser",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-block",
+          "componentName": "FooterBlocksOfLinks",
+          "specFile": "tests/specs/footerBlocksOfLinks.spec.ts",
+          "testTags": [
+            "@FooterBlocks",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "social-media-links",
+          "componentName": "SocialMediaComponent",
+          "specFile": "tests/specs/socialMediaComponent.spec.ts",
+          "testTags": [
+            "@SocialMedia",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-copyright",
+          "componentName": "Footer",
+          "specFile": "tests/specs/footer.spec.ts",
+          "testTags": [
+            "@Footer",
+            "@Functional"
+          ]
+        }
+      ],
+      "scannedAt": "2026-05-14T09:47:07.850Z"
+    },
+    {
+      "url": "https://bayer-beyond-prod-conosur.vercel.app/es-es/nosotros/quienes-somos/acerca-de-bayer",
+      "pageName": "Conosur_Acerca_de_Bayer",
+      "environment": "prod",
+      "components": [
+        {
+          "dataQa": "Header",
+          "componentName": "HeaderComponent",
+          "specFile": "tests/specs/header.spec.ts",
+          "testTags": [
+            "@Header",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "stage-image-section",
+          "componentName": "StageComponent",
+          "specFile": "tests/specs/stageComponent.spec.ts",
+          "testTags": [
+            "@Stage",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "teaser-group",
+          "componentName": "TeaserGroupComponent",
+          "specFile": "tests/specs/teaserGroupComponent.spec.ts",
+          "testTags": [
+            "@TeaserGroup",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "individual-teaser",
+          "componentName": "IndividualTeaserComponent",
+          "specFile": "tests/specs/individualTeaserComponent.spec.ts",
+          "testTags": [
+            "@IndividualTeaser",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "teaser-grid",
+          "componentName": "TeaserGridComponent",
+          "specFile": "tests/specs/teaserGrid.spec.ts",
+          "testTags": [
+            "@TeaserGrid",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-block",
+          "componentName": "FooterBlocksOfLinks",
+          "specFile": "tests/specs/footerBlocksOfLinks.spec.ts",
+          "testTags": [
+            "@FooterBlocks",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "social-media-links",
+          "componentName": "SocialMediaComponent",
+          "specFile": "tests/specs/socialMediaComponent.spec.ts",
+          "testTags": [
+            "@SocialMedia",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-copyright",
+          "componentName": "Footer",
+          "specFile": "tests/specs/footer.spec.ts",
+          "testTags": [
+            "@Footer",
+            "@Functional"
+          ]
+        }
+      ],
+      "scannedAt": "2026-05-14T12:46:28.331Z"
+    },
+    {
+      "url": "https://bayer-beyond-prod-conosur.vercel.app/es-es/nosotros/quienes-somos/nuestra-region",
+      "pageName": "Conosur_Nuestra_Region",
+      "environment": "prod",
+      "components": [
+        {
+          "dataQa": "Header",
+          "componentName": "HeaderComponent",
+          "specFile": "tests/specs/header.spec.ts",
+          "testTags": [
+            "@Header",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "stage-image-section",
+          "componentName": "StageComponent",
+          "specFile": "tests/specs/stageComponent.spec.ts",
+          "testTags": [
+            "@Stage",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "teaser-group",
+          "componentName": "TeaserGroupComponent",
+          "specFile": "tests/specs/teaserGroupComponent.spec.ts",
+          "testTags": [
+            "@TeaserGroup",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "individual-teaser",
+          "componentName": "IndividualTeaserComponent",
+          "specFile": "tests/specs/individualTeaserComponent.spec.ts",
+          "testTags": [
+            "@IndividualTeaser",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-block",
+          "componentName": "FooterBlocksOfLinks",
+          "specFile": "tests/specs/footerBlocksOfLinks.spec.ts",
+          "testTags": [
+            "@FooterBlocks",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "social-media-links",
+          "componentName": "SocialMediaComponent",
+          "specFile": "tests/specs/socialMediaComponent.spec.ts",
+          "testTags": [
+            "@SocialMedia",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-copyright",
+          "componentName": "Footer",
+          "specFile": "tests/specs/footer.spec.ts",
+          "testTags": [
+            "@Footer",
+            "@Functional"
+          ]
+        }
+      ],
+      "scannedAt": "2026-05-14T12:50:07.709Z"
+    },
+    {
+      "url": "https://bayer-beyond-prod-conosur.vercel.app/es-es/novedades/prensa",
+      "pageName": "Conosur_Prensa",
+      "environment": "prod",
+      "components": [
+        {
+          "dataQa": "Header",
+          "componentName": "HeaderComponent",
+          "specFile": "tests/specs/header.spec.ts",
+          "testTags": [
+            "@Header",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "stage-image-section",
+          "componentName": "StageComponent",
+          "specFile": "tests/specs/stageComponent.spec.ts",
+          "testTags": [
+            "@Stage",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "teaser-group",
+          "componentName": "TeaserGroupComponent",
+          "specFile": "tests/specs/teaserGroupComponent.spec.ts",
+          "testTags": [
+            "@TeaserGroup",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "individual-teaser",
+          "componentName": "IndividualTeaserComponent",
+          "specFile": "tests/specs/individualTeaserComponent.spec.ts",
+          "testTags": [
+            "@IndividualTeaser",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "banner-component",
+          "componentName": "BannerComponent",
+          "specFile": "tests/specs/bannerSVariant.spec.ts",
+          "testTags": [
+            "@Banner",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-block",
+          "componentName": "FooterBlocksOfLinks",
+          "specFile": "tests/specs/footerBlocksOfLinks.spec.ts",
+          "testTags": [
+            "@FooterBlocks",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "social-media-links",
+          "componentName": "SocialMediaComponent",
+          "specFile": "tests/specs/socialMediaComponent.spec.ts",
+          "testTags": [
+            "@SocialMedia",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-copyright",
+          "componentName": "Footer",
+          "specFile": "tests/specs/footer.spec.ts",
+          "testTags": [
+            "@Footer",
+            "@Functional"
+          ]
+        }
+      ],
+      "scannedAt": "2026-05-14T12:53:39.363Z"
+    },
+    {
+      "url": "https://bayer-beyond-prod-conosur.vercel.app/es-es/novedades/historias",
+      "pageName": "Conosur_Historias",
+      "environment": "prod",
+      "components": [
+        {
+          "dataQa": "Header",
+          "componentName": "HeaderComponent",
+          "specFile": "tests/specs/header.spec.ts",
+          "testTags": [
+            "@Header",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "stage-image-section",
+          "componentName": "StageComponent",
+          "specFile": "tests/specs/stageComponent.spec.ts",
+          "testTags": [
+            "@Stage",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-block",
+          "componentName": "FooterBlocksOfLinks",
+          "specFile": "tests/specs/footerBlocksOfLinks.spec.ts",
+          "testTags": [
+            "@FooterBlocks",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "social-media-links",
+          "componentName": "SocialMediaComponent",
+          "specFile": "tests/specs/socialMediaComponent.spec.ts",
+          "testTags": [
+            "@SocialMedia",
+            "@Functional"
+          ]
+        },
+        {
+          "dataQa": "footer-copyright",
+          "componentName": "Footer",
+          "specFile": "tests/specs/footer.spec.ts",
+          "testTags": [
+            "@Footer",
+            "@Functional"
+          ]
+        }
+      ],
+      "scannedAt": "2026-05-14T12:58:05.503Z"
+    }
+  ]
+}

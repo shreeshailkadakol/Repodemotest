@@ -54,7 +54,10 @@ This directory contains detailed test cases for each component based on requirem
    - Cart page contents and proceeding to the checkout page (checkout form is never submitted)
 
 8. [Sauce Demo Sanity Journey](./saucedemo-sanity.test-cases.md)
-   - Login, add to cart, cart verification and reaching checkout in one journey
+   - Login, add to cart, cart verification, checkout and payment with order confirmation in one journey
+
+9. [Sauce Demo Checkout Payment](./saucedemo-payment.test-cases.md)
+   - Credit card entry (iframe fields) and Pay now against the Test Payment Gateway; valid, declined and empty cases
 
 ## Best Practices
 1. Keep test cases updated when requirements change

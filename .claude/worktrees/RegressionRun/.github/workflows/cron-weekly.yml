@@ -1,0 +1,63 @@
+name: Weekly Scheduled Job
+
+on:
+  schedule:
+    - cron: '30 5 * * 3'  # Every Wednesday at 05:30 UTC (11:00 IST)
+
+jobs:
+  Playwright-Tests-Weekly:
+    name: Run Playwright Tests and Host Report on Vercel
+    runs-on: ubuntu-latest
+    environment: vercel
+
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Run Playwright Tests
+        run: npx cross-env TEST_ENV=qa npx playwright test --grep "@Functional" --project=chromium - - headless
+        continue-on-error: true
+
+      - name: Install Allure CLI
+        run: npm install -g allure-commandline --save-dev
+
+      - name: Generate Allure Report
+        run: allure generate reports/allure/allure-results --clean -o reports/allure/allure-report
+
+      - name: Upload Allure Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: reports/allure/allure-report
+          retention-days: 30
+
+      - name: Install Python and Matplotlib
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3-pip
+          pip3 install matplotlib
+
+      - name: Generate Allure Summary Chart and Email Body
+        run: python3 helpers/utils/generate_chart.py
+
+      - name: Install Vercel CLI
+        run: npm install --global vercel
+
+      - name: Deploy to Vercel
+        run: npx vercel deploy --yes --target=qa --token=${{ secrets.VERCEL_TOKEN }}

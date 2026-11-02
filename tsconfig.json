@@ -27,7 +27,7 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
@@ -35,7 +35,6 @@
     "declarationMap": false,
     "outDir": "./dist",
     "rootDir": "./",
-    "baseUrl": "./",
     "paths": {
       "@/*": ["./src/*"],
       "@components/*": ["./components/*"],

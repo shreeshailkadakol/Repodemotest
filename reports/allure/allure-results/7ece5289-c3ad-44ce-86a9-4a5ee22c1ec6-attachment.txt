@@ -1,0 +1,2 @@
+⚠️ SmartLocator: Primary selector failed for "Checkout order total". Consider updating tests.
+⚠️ SmartLocator: Primary selector failed for "Order confirmation heading". Consider updating tests.

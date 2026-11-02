@@ -1525,7 +1525,70 @@ Expected Result
 The user can successfully click the Cart icon from the header, navigate to the Cart Page, verify cart details, and click the Checkout button to proceed to the checkout information page without any errors.
 
 
+**Enter Credit Card Details and Complete Payment on Sauce Demo Website**
+Brief Description
 
+This feature validates that a user can successfully enter payment information using a credit card during checkout, proceed to the order confirmation page, and complete the purchase by selecting "Pay Now". The process ensures that payment details are accepted, the order summary is displayed correctly, and the user receives a successful order confirmation.
+
+Testing Instructions
+Launch the Sauce Demo website and log in with valid credentials.
+Add the desired product (e.g., Grey Jacket) to the shopping cart.
+Navigate to the Cart page and click Checkout.
+Enter the required customer information and continue to the payment section.
+Select Pay with Credit Card as the payment method.
+Enter valid credit card details:
+Cardholder Name
+Card Number
+Expiry Date
+CVV/Security Code
+Verify that all mandatory payment fields accept valid input.
+Review the order summary and confirm product, quantity, and pricing details.
+Click Pay Now.
+Verify that the user is redirected to the Order Confirmation page.
+Confirm that a successful payment/order confirmation message is displayed.
+Verify that the order number or confirmation details are generated and displayed correctly.
+Acceptance Criteria
+AC1: Enter Credit Card Details
+
+Given the user is on the payment page
+ When the user enters valid credit card information
+ Then the system should accept the payment details without validation errors.
+
+AC2: Mandatory Field Validation
+
+Given the user is on the payment page
+ When one or more mandatory payment fields are left blank
+ Then the system should display appropriate validation messages and prevent payment submission.
+
+AC3: Review Order Summary
+
+Given the user has entered valid payment information
+ When the order summary page is displayed
+ Then the product details, quantity, price, taxes, and total amount should be shown accurately.
+
+AC4: Complete Payment
+
+Given the order summary is displayed
+ When the user clicks Pay Now
+ Then the payment should be processed successfully.
+
+AC5: Navigate to Order Confirmation Page
+
+Given the payment is completed successfully
+ When the transaction is approved
+ Then the user should be redirected to the Order Confirmation page.
+
+AC6: Order Confirmation Details
+
+Given the user is on the Order Confirmation page
+ When the page loads successfully
+ Then a confirmation message and order details should be displayed to the user.
+
+AC7: Successful User Experience
+
+Given the checkout process is completed
+ When the order confirmation page is displayed
+ Then the user should clearly understand that the order has been placed successfully.
 
 
 

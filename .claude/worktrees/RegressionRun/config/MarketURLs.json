@@ -1,0 +1,70 @@
+[
+  {
+    "market": "UK",
+    "url": "https://www.bayer.co.uk/en-gb/",
+    "expectedTitle": "Home | Bayer United Kingdom"
+  },
+  {
+    "market": "TR",
+    "url": "https://www.bayer.com.tr/tr-tr",
+    "expectedTitle": "Anasayfa | Bayer Türkiye"
+  },
+  {
+    "market": "GA",
+    "url": "https://www.bayer-gastronomie.de/de-de",
+    "expectedTitle": "Home | Bayer Gastronomie"
+  },
+  {
+    "market": "GE",
+    "url": "https://www.gesundheit.bayer.de/de-de",
+    "expectedTitle": "Home | Gesundheit Bayer"
+  },
+  {
+    "market": "AU",
+    "url": "https://www.bayer.com.au/en-au",
+    "expectedTitle": "Home | Bayer Australia"
+  },
+  {
+    "market": "NZ",
+    "url": "https://www.bayer.co.nz/en-nz",
+    "expectedTitle": "Home | Bayer New Zealand"
+  },
+  {
+    "market": "IN",
+    "url": "https://www.bayer.in/en-in",
+    "expectedTitle": "Home | Bayer India"
+  },
+  {
+    "market": "Conosur",
+    "url": "https://www.conosur.bayer.com/es-es",
+    "expectedTitle": "Home | Bayer Conosur"
+  },
+  {
+    "market": "TW",
+    "url": "https://www.bayer.com.tw/zh-tw",
+    "expectedTitle": "Home | Bayer Taiwan"
+  },
+  {
+    "market": "BR",
+    "url": "https://www.bayer.com.br/pt-br",
+    "expectedTitle": "Bayer Brasil"
+  },
+    {
+    "market": "KU",
+    "url": "https://www.kultur.bayer.de/en",
+    "expectedTitle": "Bayer Kultur"
+  },
+    {
+    "market": "PA",
+    "url": "https://www.pallas-versicherung.de/en",
+    "expectedTitle": "Bayer Pallas"
+  },
+  {
+    "market": "JP",
+    "url": "https://www.bayer.jp/ja-jp"
+  },
+  {
+    "market": "JP-Pharma",
+    "url": "https://www.pharma.bayer.jp/ja-jp"
+  }
+]

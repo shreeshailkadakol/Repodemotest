@@ -19,6 +19,11 @@ export const componentURL = {
       url: 'https://sauce-demo.myshopify.com/collections/all',
     },
   },
+  PaymentComponent: {
+    testData: {
+      url: 'https://sauce-demo.myshopify.com/collections/all',
+    },
+  },
   LinkDisclaimerComponent: {
     testData: {
       url: '/',

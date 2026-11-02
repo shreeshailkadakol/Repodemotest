@@ -1,0 +1,8 @@
+# Batch URL list for batch-validate.ts
+# One URL per line. Lines starting with # are ignored.
+# Optional second column (separated by | or TAB) for page name.
+
+https://bayer-beyond-prod-conosur.vercel.app/es-es/nosotros/quienes-somos/acerca-de-bayer | Conosur Acerca de Bayer
+https://bayer-beyond-prod-conosur.vercel.app/es-es/nosotros/quienes-somos/nuestra-region | Conosur Nuestra Region
+https://bayer-beyond-prod-conosur.vercel.app/es-es/novedades/prensa | Conosur Prensa
+https://bayer-beyond-prod-conosur.vercel.app/es-es/novedades/historias | Conosur Historias

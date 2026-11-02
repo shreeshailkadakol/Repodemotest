@@ -1,0 +1,42 @@
+
+# Environment files
+.env
+.env.example
+
+# Saved authenticated sessions (storageState) - contain live tokens, never commit
+.auth/
+
+# IDE
+.sonarlint/
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# Ignore Allure reports
+report/allure-results/
+report/allure-report/
+
+# Ignore test reports
+report/
+test-results/
+allure-results/
+playwright-html-report/
+
+# Screenshots and visual testing
+screenshots/
+reports/screenshots/
+reports/visual-validation/
+
+# Generated reports and artifacts
+reports/allure/allure-results/
+reports/html-report/
+reports/locators/
+reports/test-results/
+reports/selector-health/
+allure-report/
+
+*.backup

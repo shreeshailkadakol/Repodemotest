@@ -1,0 +1,165 @@
+{
+  "config": {
+    "configFile": "D:\\Projects\\Bayer\\codebase\\BayerFramework\\ef-comms-dxp-test\\config\\playwright.redirect.config.ts",
+    "rootDir": "D:/Projects/Bayer/codebase/BayerFramework/ef-comms-dxp-test/tests/specs",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "D:\\Projects\\Bayer\\codebase\\BayerFramework\\ef-comms-dxp-test\\config\\global-setup.ts",
+    "globalTeardown": "D:\\Projects\\Bayer\\codebase\\BayerFramework\\ef-comms-dxp-test\\config\\global-teardown.ts",
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Projects/Bayer/codebase/BayerFramework/ef-comms-dxp-test/reports/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium-redirect-tests",
+        "name": "chromium-redirect-tests",
+        "testDir": "D:/Projects/Bayer/codebase/BayerFramework/ef-comms-dxp-test/tests/specs",
+        "testIgnore": [],
+        "testMatch": [
+          "**/urlRedirect.spec.ts"
+        ],
+        "timeout": 600000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "./reports/html-report"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "./reports/test-results.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "./reports/junit-results.xml"
+        }
+      ],
+      [
+        "list",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "runAgents": "none",
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.58.2",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "urlRedirect.spec.ts",
+      "file": "urlRedirect.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "URL Redirect Validation Tests",
+          "file": "urlRedirect.spec.ts",
+          "line": 37,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Validate URL Redirects - Batch Processing",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 1800000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-redirect-tests",
+                  "projectName": "chromium-redirect-tests",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3a16ff8bded773ae0974-59acde936a775f45f789",
+              "file": "urlRedirect.spec.ts",
+              "line": 83,
+              "column": 7
+            },
+            {
+              "title": "Individual Redirect Tests",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 1800000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-redirect-tests",
+                  "projectName": "chromium-redirect-tests",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3a16ff8bded773ae0974-9f79c37b2654f4eecd27",
+              "file": "urlRedirect.spec.ts",
+              "line": 206,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Excel File Operations",
+          "file": "urlRedirect.spec.ts",
+          "line": 246,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Verify Excel file accessibility and structure",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 1800000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-redirect-tests",
+                  "projectName": "chromium-redirect-tests",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3a16ff8bded773ae0974-621d9ff7a8d719354489",
+              "file": "urlRedirect.spec.ts",
+              "line": 248,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-06-25T14:11:01.482Z",
+    "duration": 568.5920000000001,
+    "expected": 0,
+    "skipped": 3,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

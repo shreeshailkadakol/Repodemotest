@@ -1,0 +1,120 @@
+name: Parameterized CICD Pipelines
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to deploy'
+        required: true
+        type: choice
+        default: 'develop'
+        options:
+          - develop
+      environment:
+        description: 'Target environment'
+        required: true
+        type: choice
+        default: 'qa'
+        options:
+          - dev
+          - qa
+          - stg
+          - prod
+      type:
+        description: 'Select the type of testing'
+        required: true
+        type: choice
+        options:
+          - Functional
+          - Creative
+          - Sanity
+          - Smoke
+          - Performance
+          - Accessibility
+          - Visual
+          - UKProd
+          - ProdSanitySuite
+      browser:
+        description: 'Select the browser'
+        required: true
+        type: choice
+        options:
+          - All
+          - chromium
+          - firefox
+          - webkit
+          - Microsoft Edge
+          - Mobile Chrome
+          - Mobile Safari
+          - Tablet
+          - Desktop Full HD
+
+jobs:
+  Playwright-Tests:
+    name: Run Playwright Tests and Host Report on Vercel
+    runs-on: ubuntu-latest
+    environment: vercel
+
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      BRANCH_TO_DEPLOY: ${{ github.event.inputs.branch }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BRANCH_TO_DEPLOY }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Run Playwright Tests
+        run: |
+          if [ "${{ github.event.inputs.type }}" = "ProdSanitySuite" ]; then
+            npm run test:prod:suite:functional
+          elif [ "${{ github.event.inputs.browser }}" = "All" ]; then
+            npx cross-env TEST_ENV=${{ github.event.inputs.environment }} npx playwright test --grep "@${{ github.event.inputs.type }}" - - headless
+          else
+            npx cross-env TEST_ENV=${{ github.event.inputs.environment }} npx playwright test --grep "@${{ github.event.inputs.type }}" --project=${{ github.event.inputs.browser }} - - headless
+          fi
+        continue-on-error: true
+
+      - name: Install Allure CLI
+        run: npm install -g allure-commandline --save-dev
+
+      - name: Generate Allure Report
+        run: allure generate reports/allure/allure-results --clean -o reports/allure/allure-report
+
+      - name: Upload Allure Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: reports/allure/allure-report
+          retention-days: 30
+
+      - name: Install Python and Matplotlib
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3-pip
+          pip3 install matplotlib
+
+      - name: Generate Allure Summary Chart and Email Body
+        run: python3 helpers/utils/generate_chart.py
+
+      - name: Install Vercel CLI
+        run: npm install --global vercel
+
+      - name: Deploy to Vercel
+        run: npx vercel deploy --yes --target=${{ github.event.inputs.environment }} --token=${{ secrets.VERCEL_TOKEN }}
+
+  

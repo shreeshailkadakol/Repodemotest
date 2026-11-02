@@ -254,7 +254,7 @@ export default class SelectorHealthReporter implements Reporter {
         </tr>
       </thead>
       <tbody>
-        ${Array.from(healthReport.selectorSuccessRates.entries())
+        ${Array.from<[string, any]>(healthReport.selectorSuccessRates.entries())
           .sort(([, a], [, b]) => b.rate - a.rate)
           .map(([selector, stats]: [string, any]) => `
           <tr>
@@ -311,7 +311,7 @@ export default class SelectorHealthReporter implements Reporter {
             : 0,
       },
       elementsNeedingAttention: healthReport.needsAttention,
-      selectorSuccessRates: Array.from(healthReport.selectorSuccessRates.entries()).map(
+      selectorSuccessRates: Array.from<[string, any]>(healthReport.selectorSuccessRates.entries()).map(
         ([selector, stats]: [string, any]) => ({
           selector,
           successRate: stats.rate,
