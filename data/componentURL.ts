@@ -4,6 +4,17 @@ export const componentURL = {
       url: '/',
     },
   },
+  OptimizelyLoginComponent: {
+    testData: {
+      url: 'https://localhost:5000/optimizely/cms',
+    },
+  },
+  CmsPageComponent: {
+    testData: {
+      url: 'https://localhost:5000/Optimizely/CMS/dashboard',
+      publishedBase: 'https://localhost:5000/en/',
+    },
+  },
   RegisterComponent: {
     testData: {
       url: 'https://sauce-demo.myshopify.com/account/register',

@@ -1,0 +1,4 @@
+⚠️ SmartLocator: Primary selector failed for "editor header for page "QA-Auto-1794464823368"". Consider updating tests.
+⚠️ SmartLocator: Primary selector failed for "editor header for page "QA-Auto-1794464823368"". Consider updating tests.
+⚠️ SmartLocator: Primary selector failed for "tree menu "Move to Trash"". Consider updating tests.
+⚠️ SmartLocator: Primary selector failed for "tree menu "Move to Trash"". Consider updating tests.

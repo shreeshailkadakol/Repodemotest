@@ -10,6 +10,8 @@ Shared, standardized commands for this framework. They are committed to the repo
 | `/redirect-pages [file]` | Validate page redirects | `test-data/UK-Redirects.xlsx` |
 | `/redirect-assets [file]` | Validate asset redirects | `redirect-checker/input/assets.xlsx` |
 | `/create-component <id> [env]` | Full end-to-end flow (orchestrates the standalone steps below) | `playwright-*` + `azure-devops-bug-workflow` skills |
+| `/create-page <Name> <url> [id] [env]` | Create a new page object + URL entry + spec + test-case doc | `playwright-*` skills (+ `azure-devops-bug-workflow` if a story ID is given) |
+| `/cms-page <type> <name> [parent] [env]` | Create a page in the Optimizely CMS and validate it (CMS state + published frontend) | `playwright-*` skills, `optimizelyLoginComponent` |
 | `/analyze-requirement <id>` | Analyze an Azure DevOps work item — summary, QA scope & business gaps | `requirement-analysis` skill |
 | `/generate-test-cases <id\|name>` | Generate **FE** test cases as Playwright docs under `docs/test-cases/` (markdown blueprint) | `playwright-test-documentation` skill |
 | `/generate-be-fe-test-cases <id\|name>` | Generate **BE + FE** test cases as a sheet (`.xlsx`, ADO-import 9-column) | `ado-test-case-generation` skill |
