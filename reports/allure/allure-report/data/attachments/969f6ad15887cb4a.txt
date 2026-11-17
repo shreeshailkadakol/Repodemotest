@@ -1,1 +1,0 @@
-✅ SmartLocator: Found "Optimizely login password field" using id-attribute (attempt 1/2)

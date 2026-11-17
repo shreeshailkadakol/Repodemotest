@@ -1,4 +1,0 @@
-⚠️ SmartLocator: Primary selector failed for "type tile "Standard Page"". Consider updating tests.
-⚠️ SmartLocator: Primary selector failed for "type tile "Standard Page"". Consider updating tests.
-⚠️ SmartLocator: Primary selector failed for "editor header for page "QA-Auto-1794463714172"". Consider updating tests.
-⚠️ SmartLocator: Primary selector failed for "editor header for page "QA-Auto-1794463714172"". Consider updating tests.

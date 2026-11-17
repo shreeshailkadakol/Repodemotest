@@ -6,7 +6,7 @@ Run it with `/cms-page <type> <name> [parent] [env]` (see `.claude/commands/cms-
 
 > **Safety:** this flow creates and publishes real CMS content. Use a QA/sandbox instance only; use prod only if explicitly told to. Credentials come from `.env` (`OPTIMIZELY_CMS_USERNAME` / `OPTIMIZELY_CMS_PASSWORD`) via `OptimizelyLoginComponent`, referenced by name and never printed.
 
-> **Current repo state:** `components/cmsPageComponent.ts` (create page, set fields, add Editorial/Teaser blocks, image picker, two-step publish, CMS + frontend validation, cleanup), `tests/specs/cmsPageComponent.spec.ts` (TC-CP01, TC-CP02) and `docs/dom-inspection-optimizely-cms-page.md` exist. Extend them rather than starting over. Created pages are retained by default; they are only moved to the CMS Trash when `CMS_CLEANUP=delete` is set explicitly.
+> **Current repo state:** `components/optimizely/cmsPageComponent.ts` (create page, set fields, add Editorial/Teaser blocks, image picker, two-step publish, CMS + frontend validation, cleanup), `tests/specs/optimizely/cmsPageComponent.spec.ts` (TC-CP01, TC-CP02) and `docs/optimizely/dom-inspection-optimizely-cms-page.md` exist. Extend them rather than starting over. Created pages are retained by default; they are only moved to the CMS Trash when `CMS_CLEANUP=delete` is set explicitly.
 
 ---
 
@@ -73,13 +73,13 @@ PHASE 1 - Requirement (only if a story ID is given)  [skill: azure-devops-bug-wo
 - Split the ACs into CMS-authoring ACs and frontend-rendering ACs.
 
 PHASE 2 - DOM inspection of the editor  [skill: playwright-dom-inspection, MANDATORY]
-- Log in with components/optimizelyLoginComponent.ts, go to the Edit view, viewport 1920x1080.
+- Log in with components/optimizely/optimizelyLoginComponent.ts, go to the Edit view, viewport 1920x1080.
 - With a temporary spec (deleted afterwards) inspect: the Create (+) menu and dialog (name input,
   page-type tiles, Create button); the editor form for the page type (each field's label and
   control type); how a component is added to a content area; each component's property form;
   the Publish control and status text.
 - Record id, role, label, title, scoped CSS and iframe boundaries (the editor has few data-qa attributes).
-- Screenshot each step. Save findings to docs/dom-inspection-optimizely-cms-page.md.
+- Screenshot each step. Save findings to docs/optimizely/dom-inspection-optimizely-cms-page.md.
 
 PHASE 3 - Test cases  [skill: playwright-test-documentation]
 - Write docs/test-cases/CmsPage<Name>.md with TC-IDs in two groups:
@@ -90,7 +90,7 @@ PHASE 3 - Test cases  [skill: playwright-test-documentation]
 
 PHASE 4 - Implement  [skills: playwright-test-authoring, playwright-smart-locators]
 a) data/componentURL.ts: CmsPageComponent -> { url, publishedBase }. No hardcoded URLs elsewhere.
-b) Create components/cmsPageComponent.ts (follow components/optimizelyLoginComponent.ts for structure):
+b) Create components/optimizely/cmsPageComponent.ts (follow components/optimizely/optimizelyLoginComponent.ts for structure):
    - openEditView(), openCreatePageDialog(), createPage(name, type)
    - publish() (two-step, see section 4), publishedUrl(name), static uniquePageName(prefix)
    - setField(field)            -> dispatches on `kind` to the right fill strategy
@@ -99,7 +99,7 @@ b) Create components/cmsPageComponent.ts (follow components/optimizelyLoginCompo
    - verifyFieldSaved(field), verifyComponentInArea(spec)
    - verifyPublishedOnFrontend(spec) -> page and content are live
    Every element goes through findSmart with 3+ fallbacks and a description.
-c) Create tests/specs/cmsPageComponent.spec.ts: one test per scenario (section 3). Log the created
+c) Create tests/specs/optimizely/cmsPageComponent.spec.ts: one test per scenario (section 3). Log the created
    page name for cleanup.
 
 PHASE 5 - Self-review  [skill: playwright-pre-pr-checklist]
@@ -107,7 +107,7 @@ PHASE 5 - Self-review  [skill: playwright-pre-pr-checklist]
 
 PHASE 6 - Execute  [skill: playwright-execution-reporting]
 - CONFIRM with me before the first run that creates or publishes content.
-- TEST_ENV=<env> npx playwright test tests/specs/cmsPageComponent.spec.ts --project=chromium
+- TEST_ENV=<env> npx playwright test tests/specs/optimizely/cmsPageComponent.spec.ts --project=chromium
 - Allure only if asked: `npm run allure:generate` then `npm run allure:open`.
 
 PHASE 7 - Validate both layers
@@ -143,7 +143,7 @@ frontend result, cleanup status, report location, any bug logged.
 
 ## 4. Rules to follow
 
-Verified against the local Alloy site and the working component. Re-verify on a different site or Optimizely version (details in `docs/dom-inspection-optimizely-cms-page.md`).
+Verified against the local Alloy site and the working component. Re-verify on a different site or Optimizely version (details in `docs/optimizely/dom-inspection-optimizely-cms-page.md`).
 
 - **`findSmart` does not wait.** Wait for dynamic UI with `expect.poll` around the `findSmart` call; use fixed `waitForTimeout` only as a last resort.
 - **Publishing is two clicks:** the toolbar Publish opens a panel; the panel's Publish is `li span[role="button"]` containing "Publish". After it, the toolbar Publish button disappears. Then poll the frontend, because publishing is asynchronous.
@@ -167,8 +167,8 @@ Verified against the local Alloy site and the working component. Re-verify on a 
 
 | File | Purpose |
 |---|---|
-| `components/cmsPageComponent.ts` | Page object with `setField`, `addComponent`, `populatePage`, verify methods |
+| `components/optimizely/cmsPageComponent.ts` | Page object with `setField`, `addComponent`, `populatePage`, verify methods |
 | `data/componentURL.ts` | `CmsPageComponent` dashboard URL and published base |
-| `tests/specs/cmsPageComponent.spec.ts` | One test per scenario |
-| `docs/dom-inspection-optimizely-cms-page.md` | Editor DOM findings |
+| `tests/specs/optimizely/cmsPageComponent.spec.ts` | One test per scenario |
+| `docs/optimizely/dom-inspection-optimizely-cms-page.md` | Editor DOM findings |
 | `docs/test-cases/CmsPage<Name>.md` | Test-case blueprint (after confirmation) |

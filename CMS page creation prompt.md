@@ -2,7 +2,7 @@
 
 Reusable prompt for automating **Optimizely CMS** page creation. It lets you add any CMS component, populate its input fields, publish the page, and validate both the CMS state and the published page.
 
-It builds on the existing `/cms-page` command, the `playwright-*` skills, and the working implementation in `components/cmsPageComponent.ts` and `tests/specs/cmsPageComponent.spec.ts`.
+It builds on the existing `/cms-page` command, the `playwright-*` skills, and the working implementation in `components/optimizely/cmsPageComponent.ts` and `tests/specs/optimizely/cmsPageComponent.spec.ts`.
 
 > **Safety:** this flow changes CMS content. Use only a QA or sandbox instance. Use prod only if you say so explicitly. Credentials come from `.env` (`OPTIMIZELY_CMS_USERNAME` / `OPTIMIZELY_CMS_PASSWORD`) and are referenced by name only, never printed.
 
@@ -73,7 +73,7 @@ PHASE 1 - Requirement (only if a story ID is given)  [skill: azure-devops-bug-wo
 - Split the ACs into CMS-authoring ACs and frontend-rendering ACs.
 
 PHASE 2 - DOM inspection of the editor  [skill: playwright-dom-inspection, MANDATORY]
-- Log in with components/optimizelyLoginComponent.ts. Open the Edit view.
+- Log in with components/optimizely/optimizelyLoginComponent.ts. Open the Edit view.
 - Inspect, with a temporary spec that you delete afterwards:
   * Create (+) menu, Create dialog (name input, page-type tiles, Create button)
   * the editor form for the chosen page type: every field's label, element type
@@ -95,7 +95,7 @@ PHASE 3 - Test cases  [skill: playwright-test-documentation]
 
 PHASE 4 - Implement  [skills: playwright-test-authoring, playwright-smart-locators]
 a) data/componentURL.ts: CmsPageComponent -> { url (dashboard), publishedBase }. No hardcoded base URL elsewhere.
-b) Extend components/cmsPageComponent.ts. Keep what already works:
+b) Extend components/optimizely/cmsPageComponent.ts. Keep what already works:
    openEditView, openCreatePageDialog, createPage(name, type), publish (two-step), publishedUrl.
    Add generic, spec-driven methods:
    - setField(field: CmsFieldValue)        -> dispatches on `kind` to the right fill strategy
@@ -105,7 +105,7 @@ b) Extend components/cmsPageComponent.ts. Keep what already works:
    - verifyComponentInArea(spec)           -> the block is listed in its content area
    - verifyPublishedOnFrontend(spec)       -> page and content are live (see rules below)
    Every element goes through findSmart with 3+ fallbacks and a description.
-c) tests/specs/cmsPageComponent.spec.ts: one test per scenario (see 3). Build page names with
+c) tests/specs/optimizely/cmsPageComponent.spec.ts: one test per scenario (see 3). Build page names with
    CmsPageComponent.uniquePageName(). Log the created page name for cleanup.
 
 PHASE 5 - Self-review  [skill: playwright-pre-pr-checklist]
@@ -113,7 +113,7 @@ PHASE 5 - Self-review  [skill: playwright-pre-pr-checklist]
 
 PHASE 6 - Execute  [skill: playwright-execution-reporting]
 - CONFIRM with me before the first run that creates or publishes content.
-- Run: TEST_ENV=<env> npx playwright test tests/specs/cmsPageComponent.spec.ts --project=chromium
+- Run: TEST_ENV=<env> npx playwright test tests/specs/optimizely/cmsPageComponent.spec.ts --project=chromium
 - If I ask for Allure: `npm run allure:generate` then `npm run allure:open`.
 
 PHASE 7 - Validate both layers
@@ -169,8 +169,8 @@ CMS validation result, frontend validation result, cleanup status, report locati
 
 | File | Purpose |
 |---|---|
-| `components/cmsPageComponent.ts` | Page object with generic `setField`, `addComponent`, `populatePage` and verify methods |
+| `components/optimizely/cmsPageComponent.ts` | Page object with generic `setField`, `addComponent`, `populatePage` and verify methods |
 | `data/componentURL.ts` | `CmsPageComponent` dashboard URL and published base |
-| `tests/specs/cmsPageComponent.spec.ts` | One test per scenario |
+| `tests/specs/optimizely/cmsPageComponent.spec.ts` | One test per scenario |
 | `docs/test-cases/CmsPage<Name>.md` | Test-case blueprint (after confirmation) |
 | Allure / HTML report | On request |
