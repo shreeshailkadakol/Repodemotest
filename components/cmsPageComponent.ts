@@ -306,6 +306,42 @@ export class CmsPageComponent extends BasePage {
     await this.waitSmart(this.createContentButton(), 45000);
   }
 
+  /**
+   * Auto-waits (no fixed sleep) until the block's selected image is attached and rendered in the editor preview:
+   * the <img> inside the block must carry the file in its `src` and have loaded (naturalWidth > 0).
+   * Anchored to the block's first text value because the site header reuses the same logo image.
+   */
+  async waitForImageUploaded(spec: CmsComponentSpec, timeout = 30000): Promise<void> {
+    const image = spec.fields.find((f) => f.kind === 'image');
+    const anchor = spec.fields.find((f) => f.kind !== 'image' && f.kind !== 'richtext');
+    if (!image || !anchor) return;
+    const stem = image.value.replace(/\.[a-z0-9]+$/i, '');
+
+    // The visible page preview is the iframe loading the page in edit mode (the name="sitePreview" container is hidden).
+    const previewFrame = 'iframe[src*="epieditmode"]';
+    await this.waitSmart({
+      css: previewFrame,
+      xpath: '//iframe[contains(@src,"epieditmode")]',
+      description: 'editor preview frame',
+    });
+    const img = this.page
+      .frameLocator(previewFrame)
+      .locator(`xpath=//*[contains(normalize-space(text()), "${anchor.value}")]/ancestor::*[.//img][1]//img`)
+      .first();
+
+    await expect(img, `image "${image.value}" of block "${spec.name}" should render in the preview`).toHaveAttribute(
+      'src',
+      new RegExp(stem, 'i'),
+      { timeout }
+    );
+    await expect
+      .poll(async () => img.evaluate((el: HTMLImageElement) => el.complete && el.naturalWidth > 0), {
+        timeout,
+        message: `image "${image.value}" should finish loading`,
+      })
+      .toBe(true);
+  }
+
   async verifyComponentInArea(spec: CmsComponentSpec): Promise<void> {
     await expect(
       await this.waitSmart({ text: spec.name, description: `block "${spec.name}" in content area` })

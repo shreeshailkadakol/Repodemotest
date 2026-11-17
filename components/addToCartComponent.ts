@@ -66,8 +66,8 @@ export class AddToCartComponent extends BasePage {
 
   async getProductImage(): Promise<Locator> {
     return await this.findSmart({
-      css: '#product-photos img, .product-image img, img[src*="fleece"]',
-      xpath: '(//img[contains(@src,"fleece")])[1]',
+      css: 'img[src*="fleece"]:visible',
+      xpath: '(//img[contains(@src,"fleece") and not(contains(@class,"desktop"))])[1]',
       description: 'Product image',
     });
   }

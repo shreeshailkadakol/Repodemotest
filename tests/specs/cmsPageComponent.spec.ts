@@ -96,6 +96,10 @@ test.describe('Optimizely CMS page creation @CmsPage', () => {
     await cms.populatePage(spec);
     // Requested fixed wait: let the Text and Teaser blocks finish saving/rendering before validation.
     await page.waitForTimeout(3000);
+    // Auto-wait for the Teaser image upload/selection to be attached and rendered before validating.
+    for (const component of spec.components) {
+      await cms.waitForImageUploaded(component);
+    }
     for (const field of spec.fields) {
       await cms.verifyFieldSaved(field);
     }

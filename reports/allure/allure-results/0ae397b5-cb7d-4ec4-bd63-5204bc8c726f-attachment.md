@@ -1,0 +1,487 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - img "logo" [ref=e9] [cursor=pointer]
+        - generic [ref=e10]: Optimizely
+      - button "CMS" [disabled] [ref=e13]:
+        - generic [ref=e15]: CMS
+      - generic [ref=e16]:
+        - button "Search" [ref=e19] [cursor=pointer]:
+          - img [ref=e20]
+        - button "Notifications" [ref=e24] [cursor=pointer]:
+          - img [ref=e26]
+        - generic "Help" [ref=e28]:
+          - button [ref=e29] [cursor=pointer]:
+            - img [ref=e34]
+        - generic "shreeshailkadakol" [ref=e36]:
+          - button [ref=e37] [cursor=pointer]:
+            - img [ref=e42]
+  - generic [ref=e50]:
+    - link "Dashboard" [ref=e52] [cursor=pointer]:
+      - /url: /Optimizely/CMS/dashboard
+      - img [ref=e54]
+      - generic [ref=e56]: Dashboard
+    - link "Edit" [ref=e58] [cursor=pointer]:
+      - /url: /Optimizely/CMS/
+      - img [ref=e60]
+      - generic [ref=e62]: Edit
+    - link "Reports" [ref=e64] [cursor=pointer]:
+      - /url: /Optimizely/CMS/reports
+      - img [ref=e66]
+      - generic [ref=e68]: Reports
+    - link "Settings" [ref=e70] [cursor=pointer]:
+      - /url: /Optimizely/Settings/default
+      - img [ref=e72]
+      - generic [ref=e74]: Settings
+  - generic [ref=e78]:
+    - generic:
+      - generic:      +                                                                          
+    - generic [ref=e79]:
+      - toolbar [ref=e81]:
+        - generic [ref=e82]:
+          - generic [ref=e83]:
+            - button "Toggle navigation pane" [ref=e84] [cursor=pointer]:
+              - generic [ref=e85]: 
+            - button [ref=e86] [cursor=pointer]
+          - generic [ref=e87]:
+            - generic [ref=e88]:
+              - button "+" [ref=e90] [cursor=pointer]:
+                - generic [ref=e91]: +
+                - text:   
+              - button [ref=e92] [cursor=pointer]
+            - generic [ref=e95]:
+              - generic [ref=e96]:
+                - generic [ref=e97]: Start
+                - generic [ref=e98]:
+                  - img [ref=e99]
+                  - generic "QA-Auto-1794476994753" [ref=e101]
+              - generic [ref=e103] [cursor=pointer]:
+                - img [ref=e104]
+                - img [ref=e108]
+            - generic [ref=e110]:
+              - button "Auto saved" [ref=e111]:
+                - generic [ref=e113]: Auto saved
+              - button [ref=e114] [cursor=pointer]
+        - generic [ref=e115]:
+          - generic [ref=e116]:
+            - 'button "Language : English (Master)" [ref=e119] [cursor=pointer]':
+              - generic [ref=e122]:
+                - generic [ref=e123]:
+                  - text: Language
+                  - generic [ref=e124]: ":"
+                - generic [ref=e125]: English (Master)
+              - img [ref=e127]
+            - 'button "View as Audience : Everyone" [ref=e131] [cursor=pointer]':
+              - generic [ref=e134]:
+                - generic [ref=e135]:
+                  - text: View as Audience
+                  - generic [ref=e136]: ":"
+                - generic [ref=e137]: Everyone
+              - img [ref=e139]
+            - 'button "Variations : Original" [ref=e143] [cursor=pointer]':
+              - generic [ref=e146]:
+                - generic [ref=e147]:
+                  - text: Variations
+                  - generic [ref=e148]: ":"
+                - generic [ref=e149]: Original
+              - img [ref=e151]
+            - button "Show Comments" [ref=e153] [cursor=pointer]:
+              - generic [ref=e154]: 
+            - button [ref=e155] [cursor=pointer]
+            - generic [ref=e156]:
+              - button "Compare different versions" [ref=e157] [cursor=pointer]
+              - button [ref=e159] [cursor=pointer]
+              - text:  
+            - text: 
+            - generic [ref=e160]:
+              - text: 
+              - generic [ref=e161]:
+                - button "Publish" [ref=e163] [cursor=pointer]:
+                  - generic [ref=e164]: Publish
+                  - generic [ref=e165]: 
+                - button [ref=e166] [cursor=pointer]
+            - generic [ref=e167]:
+              - generic [ref=e168]:
+                - button " " [ref=e170] [cursor=pointer]:
+                  - generic [ref=e171]: 
+                  - generic [ref=e172]: 
+                - button [ref=e173] [cursor=pointer]
+              - text:  
+          - generic [ref=e174]:
+            - button "Toggle assets pane" [ref=e175] [cursor=pointer]:
+              - generic [ref=e176]: 
+            - button [ref=e177] [cursor=pointer]
+      - generic [ref=e180]:
+        - generic [ref=e182]:
+          - text: +
+          - generic [ref=e187]:
+            - complementary [ref=e188]:
+              - generic [ref=e189]:
+                - generic [ref=e190]:
+                  - generic [ref=e191]:
+                    - generic:
+                      - img
+                    - textbox "Filter by name" [ref=e192]
+                  - 'button "Group : All" [ref=e194] [cursor=pointer]':
+                    - generic [ref=e195]:
+                      - generic [ref=e197]:
+                        - generic [ref=e198]:
+                          - text: Group
+                          - generic [ref=e199]: ":"
+                        - generic [ref=e200]: All
+                      - img [ref=e201]
+                - generic [ref=e204]:
+                  - generic [ref=e205]:
+                    - heading "Content" [level=5] [ref=e207]
+                    - list [ref=e208]:
+                      - listitem [ref=e209]:
+                        - generic [ref=e210]:
+                          - generic [ref=e211]: Category
+                          - img [ref=e215] [cursor=pointer]
+                        - generic [ref=e219]:
+                          - generic [ref=e221]: Add one or more categories
+                          - generic [ref=e222] [cursor=pointer]: 
+                      - listitem [ref=e223]:
+                        - generic [ref=e224]:
+                          - generic [ref=e225]: ContentAreaCssClass
+                          - img [ref=e226]
+                        - textbox [ref=e231]
+                      - listitem [ref=e232]:
+                        - generic [ref=e233]:
+                          - generic [ref=e234]: Teaser image
+                          - img [ref=e238] [cursor=pointer]
+                        - generic [ref=e244]:
+                          - text: 
+                          - link " Drop content here or Select Image" [ref=e245] [cursor=pointer]:
+                            - /url: "#"
+                            - generic [ref=e247]:
+                              - text: 
+                              - generic [ref=e248]: Drop content here or
+                              - generic [ref=e249]:
+                                - button "Select Image" [ref=e250]:
+                                  - generic [ref=e251]: Select Image
+                                - button [ref=e252]
+                          - text: 
+                      - listitem [ref=e253]:
+                        - generic [ref=e254]:
+                          - generic [ref=e255]: Teaser text
+                          - img [ref=e259] [cursor=pointer]
+                        - textbox [ref=e263]
+                      - listitem [ref=e264]:
+                        - generic [ref=e265]:
+                          - generic [ref=e266]: Main body
+                          - img [ref=e270] [cursor=pointer]
+                        - application [ref=e277]:
+                          - generic [ref=e278]:
+                            - group [ref=e281]:
+                              - toolbar [ref=e282]:
+                                - button "Block Paragraph" [ref=e283]:
+                                  - generic [ref=e284]: Paragraph
+                                  - img [ref=e286]
+                                - button "Bold" [ref=e288]:
+                                  - img [ref=e290]
+                                - button "Italic" [ref=e292]:
+                                  - img [ref=e294]
+                                - button "Alignment left" [ref=e296]:
+                                  - img [ref=e299]
+                                  - img [ref=e302]
+                                - button "Numbered list" [ref=e304]:
+                                  - img [ref=e306]
+                                - button "Bullet list" [ref=e308]:
+                                  - img [ref=e310]
+                                - button "Decrease indent" [disabled] [ref=e312]:
+                                  - img [ref=e314]
+                                - button "Increase indent" [ref=e316]:
+                                  - img [ref=e318]
+                                - button "Insert/edit link" [disabled] [ref=e320]:
+                                  - img [ref=e322]
+                                - button "Anchor" [ref=e324]:
+                                  - img [ref=e326]
+                                - button "Insert/edit image" [ref=e328]:
+                                  - img [ref=e330]
+                                - button "Image Editor" [disabled] [ref=e332]:
+                                  - img [ref=e334]
+                                - button "Add local block" [ref=e336]:
+                                  - generic [ref=e338]: 
+                                  - img [ref=e339]
+                                - button "Personalized Content" [disabled] [ref=e341]:
+                                  - generic [ref=e343]: 
+                            - iframe [ref=e346]:
+                              - generic "Rich Text Area. Press ALT-0 for help." [active] [ref=f5e1]:
+                                - paragraph [ref=f5e2]: QA automation page body text
+                          - generic [ref=e347]:
+                            - generic [ref=e348]:
+                              - navigation [ref=e349]:
+                                - button "p" [ref=e350]
+                              - generic [ref=e351]: Press Alt+0 for help
+                            - generic "Press the arrow keys to resize the editor." [ref=e352]:
+                              - img [ref=e353]
+                      - listitem [ref=e356]:
+                        - generic [ref=e358]: Large content area
+                        - generic [ref=e362]:
+                          - generic [ref=e363]:
+                            - text: 
+                            - tree "undefined" [ref=e364]:
+                              - 'generic "QA-Auto-1794476994753-text, Content Reference: 278 (Type: Editorial)" [ref=e365]':
+                                - text: 
+                                - treeitem "QA-Auto-1794476994753-text" [ref=e366] [cursor=pointer]
+                                - text:  
+                              - 'generic "QA-Auto-1794476994753-teaser, Content Reference: 279 (Type: Teaser)" [ref=e367]':
+                                - text: 
+                                - treeitem "QA-Auto-1794476994753-teaser" [ref=e368] [cursor=pointer]
+                                - text:  
+                          - generic [ref=e370]:
+                            - text: 
+                            - generic [ref=e371]: Drop content here or
+                            - generic [ref=e373]:
+                              - button "Select Content" [ref=e375] [cursor=pointer]:
+                                - generic [ref=e376]: Select Content
+                                - generic [ref=e377]: 
+                              - button [ref=e378] [cursor=pointer]
+                  - generic [ref=e379]:
+                    - heading "SEO" [level=5] [ref=e381]
+                    - list [ref=e382]:
+                      - listitem [ref=e383]:
+                        - generic [ref=e385]: Title
+                        - textbox [ref=e389]
+                      - listitem [ref=e390]:
+                        - generic [ref=e392]: Keywords
+                        - generic [ref=e395]:
+                          - grid
+                          - generic [ref=e396]:
+                            - button "Add String" [ref=e397] [cursor=pointer]:
+                              - generic [ref=e398]: +
+                            - button [ref=e399] [cursor=pointer]
+                      - listitem [ref=e400]:
+                        - generic [ref=e401]:
+                          - generic [ref=e402]: Page description
+                          - img [ref=e406] [cursor=pointer]
+                        - textbox [ref=e410]
+                      - listitem [ref=e411]:
+                        - generic [ref=e412]:
+                          - checkbox [ref=e415]
+                          - generic [ref=e416]:
+                            - generic [ref=e417]: Disable indexing
+                            - img [ref=e421] [cursor=pointer]
+                  - generic [ref=e423]:
+                    - heading "Settings" [level=5] [ref=e425]
+                    - list [ref=e426]:
+                      - listitem [ref=e427]:
+                        - generic [ref=e428]:
+                          - generic [ref=e429]: Name in URL
+                          - img [ref=e433] [cursor=pointer]
+                        - generic [ref=e437]:
+                          - generic "qa-auto-1794476994753" [ref=e438]
+                          - link "Change" [ref=e439] [cursor=pointer]:
+                            - /url: "#"
+                      - listitem [ref=e440]:
+                        - generic [ref=e441]:
+                          - generic [ref=e442]: Simple address
+                          - img [ref=e446] [cursor=pointer]
+                        - link "Change" [ref=e451] [cursor=pointer]:
+                          - /url: "#"
+                      - listitem [ref=e452]:
+                        - generic [ref=e453]:
+                          - checkbox [checked] [ref=e456]
+                          - generic [ref=e457]:
+                            - generic [ref=e458]: Display in navigation
+                            - img [ref=e462] [cursor=pointer]
+                      - listitem [ref=e464]:
+                        - generic [ref=e465]:
+                          - generic [ref=e466]: Content type
+                          - img [ref=e470] [cursor=pointer]
+                        - link "Standard Page" [ref=e474] [cursor=pointer]:
+                          - /url: /Optimizely/Settings/default#/ContentTypes/edit-content-type/19
+                      - listitem [ref=e475]:
+                        - generic [ref=e477]: Content ID
+                        - generic [ref=e479]: 730d7fd1-c27f-4a2b-898a-32b9eeaf5cc1
+                      - listitem [ref=e480]:
+                        - generic [ref=e481]:
+                          - generic [ref=e482]: Published
+                          - img [ref=e486] [cursor=pointer]
+                        - generic [ref=e490]:
+                          - text:  
+                          - link "Change" [ref=e491] [cursor=pointer]:
+                            - /url: "#"
+                      - listitem [ref=e492]:
+                        - generic [ref=e493]:
+                          - generic [ref=e494]: Created
+                          - generic [ref=e495]: "*"
+                          - img [ref=e499] [cursor=pointer]
+                        - generic [ref=e503]:
+                          - text:  
+                          - generic [ref=e505]: Today, 3:19 PM
+                          - link "Change" [ref=e506] [cursor=pointer]:
+                            - /url: "#"
+                      - listitem [ref=e507]:
+                        - generic [ref=e508]:
+                          - generic [ref=e509]: Modified
+                          - img [ref=e510]
+                          - img [ref=e515] [cursor=pointer]
+                        - generic [ref=e521]: Today, 3:19 PM
+                      - listitem [ref=e522]:
+                        - generic [ref=e523]:
+                          - checkbox [ref=e526]
+                          - generic [ref=e527]:
+                            - generic [ref=e528]: Update modified date
+                            - img [ref=e532] [cursor=pointer]
+                      - listitem [ref=e534]:
+                        - generic [ref=e535]:
+                          - generic [ref=e536]: Sort subpages
+                          - img [ref=e540] [cursor=pointer]
+                        - listbox [ref=e544] [cursor=pointer]:
+                          - option "According to creation date (latest first)" [ref=e545]
+                          - text:  
+                      - listitem [ref=e546]:
+                        - generic [ref=e547]:
+                          - generic [ref=e548]: Sort index
+                          - img [ref=e552] [cursor=pointer]
+                        - generic [ref=e555]:
+                          - generic [ref=e556] [cursor=pointer]:
+                            - generic [ref=e558]: 
+                            - generic [ref=e560]: 
+                          - spinbutton [ref=e562]: "709"
+                      - listitem [ref=e563]:
+                        - generic [ref=e564]:
+                          - generic [ref=e565]: Shortcut
+                          - img [ref=e569] [cursor=pointer]
+                        - generic [ref=e573]:
+                          - generic [ref=e574]: No shortcut
+                          - button "Manage" [ref=e575] [cursor=pointer]:
+                            - generic [ref=e576]: Manage
+                          - button [ref=e577] [cursor=pointer]
+                      - listitem [ref=e578]:
+                        - generic [ref=e579]:
+                          - checkbox [ref=e582]
+                          - generic [ref=e583]:
+                            - generic [ref=e584]: Hide site header
+                            - img [ref=e588] [cursor=pointer]
+                      - listitem [ref=e590]:
+                        - generic [ref=e591]:
+                          - checkbox [ref=e594]
+                          - generic [ref=e595]:
+                            - generic [ref=e596]: Hide site footer
+                            - img [ref=e600] [cursor=pointer]
+            - generic [ref=e607]:
+              - iframe [ref=e609]:
+                - generic [active] [ref=f4e1]:
+                  - banner [ref=f4e2]:
+                    - navigation [ref=f4e4]:
+                      - generic [ref=f4e5]:
+                        - link "Alloy - collaboration, communication and project management online" [ref=f4e6] [cursor=pointer]:
+                          - /url: /Optimizely/CMS/Content/en/,,6/?epieditmode=true
+                          - img [ref=f4e8]
+                        - list [ref=f4e10]:
+                          - listitem [ref=f4e11]:
+                            - link "Alloy Plan" [ref=f4e12] [cursor=pointer]:
+                              - /url: /Optimizely/CMS/Content/en/alloy-plan,,7/?epieditmode=true
+                          - listitem [ref=f4e13]:
+                            - link "Alloy Track" [ref=f4e14] [cursor=pointer]:
+                              - /url: /Optimizely/CMS/Content/en/alloy-tracks,,8/?epieditmode=true
+                          - listitem [ref=f4e15]:
+                            - link "Alloy Meet" [ref=f4e16] [cursor=pointer]:
+                              - /url: /Optimizely/CMS/Content/en/alloy-meet,,10/?epieditmode=true
+                          - listitem [ref=f4e17]:
+                            - link "About us" [ref=f4e18] [cursor=pointer]:
+                              - /url: /Optimizely/CMS/Content/en/about-us,,11/?epieditmode=true
+                          - listitem [ref=f4e19]:
+                            - link "QA-Auto-1794474513248" [ref=f4e20] [cursor=pointer]:
+                              - /url: /Optimizely/CMS/Content/en/qa-auto-1794474513248,,255/?epieditmode=true
+                          - listitem [ref=f4e21]:
+                            - link "QA-Auto-1794474513968" [ref=f4e22] [cursor=pointer]:
+                              - /url: /Optimizely/CMS/Content/en/qa-auto-1794474513968,,256/?epieditmode=true
+                          - listitem [ref=f4e23]:
+                            - link "QA-Auto-1794475051341" [ref=f4e24] [cursor=pointer]:
+                              - /url: /Optimizely/CMS/Content/en/qa-auto-1794475051341,,262/?epieditmode=true
+                          - listitem [ref=f4e25]:
+                            - link "QA-Auto-1794475051782" [ref=f4e26] [cursor=pointer]:
+                              - /url: /Optimizely/CMS/Content/en/qa-auto-1794475051782,,263/?epieditmode=true
+                          - listitem [ref=f4e27]:
+                            - link "QA-Auto-1794475762893" [ref=f4e28] [cursor=pointer]:
+                              - /url: /Optimizely/CMS/Content/en/qa-auto-1794475762893,,269/?epieditmode=true
+                          - listitem [ref=f4e29]:
+                            - link "QA-Auto-1794475762950" [ref=f4e30] [cursor=pointer]:
+                              - /url: /Optimizely/CMS/Content/en/qa-auto-1794475762950,,270/?epieditmode=true
+                  - generic [ref=f4e31]:
+                    - navigation "breadcrumb" [ref=f4e32]:
+                      - list [ref=f4e33]:
+                        - listitem [ref=f4e34]:
+                          - link "Start" [ref=f4e35] [cursor=pointer]:
+                            - /url: /Optimizely/CMS/Content/en/,,6/?epieditmode=true
+                    - generic [ref=f4e36]:
+                      - generic [ref=f4e37]:
+                        - list
+                      - generic [ref=f4e38]:
+                        - generic [ref=f4e39]:
+                          - heading "QA-Auto-1794476994753" [level=1] [ref=f4e40]
+                          - paragraph [ref=f4e41]
+                          - paragraph [ref=f4e44]: QA automation page body text
+                        - generic [ref=f4e45]:
+                          - paragraph [ref=f4e48]: QA automation editorial text
+                          - generic [ref=f4e50]:
+                            - img [ref=f4e52]
+                            - heading "QA Teaser Heading" [level=2] [ref=f4e53]
+                            - paragraph [ref=f4e54]: QA automation teaser text
+                  - contentinfo [ref=f4e55]:
+                    - generic [ref=f4e57]:
+                      - generic [ref=f4e58]:
+                        - heading "Products" [level=3] [ref=f4e59]
+                        - list [ref=f4e60]:
+                          - listitem [ref=f4e61]:
+                            - link "Alloy Plan" [ref=f4e62] [cursor=pointer]:
+                              - /url: /Optimizely/CMS/Content/en/alloy-plan,,7/?epieditmode=true
+                          - listitem [ref=f4e63]:
+                            - link "Alloy Track" [ref=f4e64] [cursor=pointer]:
+                              - /url: /Optimizely/CMS/Content/en/alloy-tracks,,8/?epieditmode=true
+                          - listitem [ref=f4e65]:
+                            - link "Alloy Meet" [ref=f4e66] [cursor=pointer]:
+                              - /url: /Optimizely/CMS/Content/en/alloy-meet,,10/?epieditmode=true
+                      - generic [ref=f4e67]:
+                        - heading "The Company" [level=3] [ref=f4e68]
+                        - list [ref=f4e69]:
+                          - listitem [ref=f4e70]:
+                            - link "About us" [ref=f4e71] [cursor=pointer]:
+                              - /url: /Optimizely/CMS/Content/en/about-us,,11/?epieditmode=true
+                          - listitem [ref=f4e72]:
+                            - link "News & Events" [ref=f4e73] [cursor=pointer]:
+                              - /url: /Optimizely/CMS/Content/en/about-us/news-events,,12/?epieditmode=true
+                          - listitem [ref=f4e74]:
+                            - link "Management" [ref=f4e75] [cursor=pointer]:
+                              - /url: /Optimizely/CMS/Content/en/about-us/management,,28/?epieditmode=true
+                          - listitem [ref=f4e76]:
+                            - link "Contact us" [ref=f4e77] [cursor=pointer]:
+                              - /url: /Optimizely/CMS/Content/en/about-us/contact-us,,29/?epieditmode=true
+                          - listitem [ref=f4e78]:
+                            - link "Become a reseller" [ref=f4e79] [cursor=pointer]:
+                              - /url: /Optimizely/CMS/Content/en/about-us/become-a-reseller,,30/?epieditmode=true
+                      - generic [ref=f4e80]:
+                        - heading "News & Events" [level=3] [ref=f4e81]
+                        - list [ref=f4e82]:
+                          - listitem [ref=f4e83]:
+                            - link "Events" [ref=f4e84] [cursor=pointer]:
+                              - /url: /Optimizely/CMS/Content/en/about-us/news-events/events,,13/?epieditmode=true
+                          - listitem [ref=f4e85]:
+                            - link "Press Releases" [ref=f4e86] [cursor=pointer]:
+                              - /url: /Optimizely/CMS/Content/en/about-us/news-events/press-releases,,17/?epieditmode=true
+                      - generic [ref=f4e87]:
+                        - heading "Customer Zone" [level=3] [ref=f4e88]
+                        - list [ref=f4e89]:
+                          - listitem [ref=f4e90]:
+                            - link "Reseller extranet" [ref=f4e91] [cursor=pointer]:
+                              - /url: /Optimizely/CMS/Content/en/about-us/become-a-reseller,,30/?epieditmode=true
+                        - list [ref=f4e92]:
+                          - listitem [ref=f4e93]:
+                            - link "Log out" [ref=f4e94] [cursor=pointer]:
+                              - /url: /Optimizely/CMS/Content/en/qa-auto-1794476994753,,276_288/Logout?epieditmode=true
+              - generic [ref=e616] [cursor=pointer]: MainContentArea
+        - text:  *   *   *   *      *    *  
+    - generic:
+      - generic:      +                  + +                   
+  - text:                                      
+  - alert [ref=e622]
+  - text:                 
+```

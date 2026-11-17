@@ -3,7 +3,7 @@
 export class envUtils {
   static readonly baseUrls = {
     //dev: 'https://ef-comms-rjkjhx9x2-bayer-stakeholder-and-employee-journey.vercel.app/',
-    qa: 'https://localhost:5000/optimizely/cms',
+    qa: 'https://sauce-demo.myshopify.com/',
     //stg: 'https://bayer-beyond-staging-uk.vercel.app/',
     //prod: 'https://bayer-beyond-prod-au.vercel.app/en-au/',
     

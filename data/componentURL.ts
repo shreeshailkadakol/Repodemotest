@@ -1,7 +1,7 @@
 export const componentURL = {
   LoginComponent: {
     testData: {
-      url: '/',
+      url: 'https://www.saucedemo.com/',
     },
   },
   OptimizelyLoginComponent: {
