@@ -1,0 +1,135 @@
+name: Daily Pipeline
+
+# Runs the Smoke + Sanity subset of the public (SauceDemo) Playwright suite every day,
+# builds an execution report and emails it. NOTE: schedules only fire from the default branch.
+on:
+  schedule:
+    - cron: '30 3 * * *' # every day 03:30 UTC (09:00 IST)
+  workflow_dispatch:
+    inputs:
+      grep:
+        description: 'Playwright --grep expression (default: smoke + sanity tests)'
+        required: false
+        default: '@Smoke|@Sanity'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: daily-pipeline
+  cancel-in-progress: false
+
+jobs:
+  daily:
+    name: Daily test run and report
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      CI: 'true'
+      TEST_ENV: qa
+      PIPELINE_NAME: Daily
+      MAIL_TO: shreeshail.kadakol@valtech.com
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Restore trend history
+        uses: actions/cache/restore@v4
+        with:
+          path: reports/history
+          key: daily-history-${{ github.run_id }}
+          restore-keys: daily-history-
+
+      - name: Run Playwright tests
+        id: tests
+        continue-on-error: true # report + email must still run when tests fail
+        run: >
+          npx playwright test tests/specs/saucedemo
+          --project=chromium
+          --grep "${{ github.event.inputs.grep || '@Smoke|@Sanity' }}"
+
+      - name: Generate Allure HTML report
+        if: always()
+        continue-on-error: true
+        run: npx allure generate reports/allure/allure-results --clean -o reports/allure/allure-report
+
+      - name: Build execution summary
+        id: summary
+        if: always()
+        env:
+          JOB_STATUS: ${{ job.status }}
+          TEST_OUTCOME: ${{ steps.tests.outcome }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          REPO: ${{ github.repository }}
+          BRANCH: ${{ github.ref_name }}
+          SHA: ${{ github.sha }}
+          RUN_ID: ${{ github.run_id }}
+        run: node scripts/ci/summarize-results.js
+
+      - name: Save trend history
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: reports/history
+          key: daily-history-${{ github.run_id }}
+
+      - name: Upload reports
+        id: upload
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-report-${{ github.run_id }}
+          path: |
+            reports/summary
+            reports/history
+            reports/html-report
+            reports/allure/allure-report
+            reports/selector-health
+            test-results
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Rebuild email with report link
+        if: always()
+        env:
+          JOB_STATUS: ${{ job.status }}
+          TEST_OUTCOME: ${{ steps.tests.outcome }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          ARTIFACT_URL: ${{ steps.upload.outputs.artifact-url }}
+          REPO: ${{ github.repository }}
+          BRANCH: ${{ github.ref_name }}
+          SHA: ${{ github.sha }}
+          RUN_ID: ${{ github.run_id }}
+        run: node scripts/ci/summarize-results.js
+
+      - name: Send email report
+        if: always()
+        uses: dawidd6/action-send-mail@v6
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          secure: ${{ secrets.SMTP_PORT == '465' }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          from: ${{ secrets.MAIL_FROM }}
+          to: ${{ env.MAIL_TO }}
+          subject: ${{ steps.summary.outputs.subject }}
+          html_body: file://reports/summary/email_body.html
+
+      - name: Fail the job if tests failed
+        if: always() && steps.tests.outcome != 'success'
+        run: |
+          echo "Playwright tests did not pass (outcome: ${{ steps.tests.outcome }})."
+          exit 1
