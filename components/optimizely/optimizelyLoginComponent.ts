@@ -2,7 +2,8 @@ import { Page, Browser, BrowserContext, Locator, expect } from '@playwright/test
 import * as dotenv from 'dotenv';
 import { BasePage } from '../../helpers/utils/basePage';
 
-dotenv.config();
+// override: a stale OPTIMIZELY_CMS_* system/user env var must not shadow the values in .env
+dotenv.config({ override: true, quiet: true });
 
 /**
  * Optimizely CMS admin login component.
@@ -25,8 +26,8 @@ export class OptimizelyLoginComponent extends BasePage {
 
   /** Credentials come from .env (OPTIMIZELY_CMS_USERNAME / OPTIMIZELY_CMS_PASSWORD) - never hardcoded. */
   static get credentials(): { username: string; password: string } {
-    const username = process.env.OPTIMIZELY_CMS_USERNAME;
-    const password = process.env.OPTIMIZELY_CMS_PASSWORD;
+    const username = process.env.OPTIMIZELY_CMS_USERNAME?.trim();
+    const password = process.env.OPTIMIZELY_CMS_PASSWORD?.trim();
     if (!username || !password) {
       throw new Error('Set OPTIMIZELY_CMS_USERNAME and OPTIMIZELY_CMS_PASSWORD in .env');
     }
@@ -114,8 +115,11 @@ export class OptimizelyLoginComponent extends BasePage {
   }
 
   async verifyLoggedIn(): Promise<void> {
-    await expect.soft(this.page).toHaveURL(/\/optimizely\/cms/);
-    expect.soft(this.page.url()).not.toContain('/Util/Login');
+    // One auto-retrying check: the failed-login URL (/Util/Login?returnUrl=/optimizely/cms) also contains
+    // "/optimizely/cms", so the path must be validated, not just matched.
+    await expect
+      .soft(this.page, 'Login should land on the CMS (not stay on /Util/Login - check OPTIMIZELY_CMS_* credentials)')
+      .toHaveURL((url) => /^\/optimizely\/cms/i.test(url.pathname) && !/\/Util\/Login/i.test(url.pathname));
     await expect.soft(await this.getCmsNavigation()).toBeVisible();
   }
 

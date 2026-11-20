@@ -1,3 +1,3 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","45358","TC-CP02: create Standard Page with Text (Editorial) and Teaser (logo + text) blocks, publish and validate @Functional","chromium","2026-11-17","passed","2026-11-17","Optimizely CMS page creation @CmsPage","optimizely\cmsPageComponent.spec.ts","",""
-"","30456","TC-CP01: create Standard Page, add text block, publish and validate @Functional","chromium","2026-11-17","passed","2026-11-17","Optimizely CMS page creation @CmsPage","optimizely\cmsPageComponent.spec.ts","",""
+"","6202","TC-CP02: create Standard Page with Text (Editorial) and Teaser (logo + text) blocks, publish and validate @Functional","chromium","2026-11-19","failed","2026-11-19","Optimizely CMS page creation @CmsPage","optimizely\cmsPageComponent.spec.ts","",""
+"","6195","TC-CP01: create Standard Page, add text block, publish and validate @Functional","chromium","2026-11-19","failed","2026-11-19","Optimizely CMS page creation @CmsPage","optimizely\cmsPageComponent.spec.ts","",""
